@@ -1,0 +1,13 @@
+.containBox:hover .layoutBox{ 
+                opacity: 1;
+}
+
+
+.layoutBox {
+    height : 100%;
+    background : #f3ebe48c;
+    opacity: 0;
+    transition: .3s ease-in-out  ;
+
+}
+
