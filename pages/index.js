@@ -1,9 +1,11 @@
 import Navbar from "../src/Components/Navbar/Navbar"
+import SlideShow from "../src/Components/Home/SlideShow"
 
 const Home =()=>{
     return (
         <>
-        <Navbar />
+        {/* <Navbar /> */}
+        <SlideShow />
         <p>sss</p>
         </>
     )
