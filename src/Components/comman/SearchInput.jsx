@@ -1,4 +1,4 @@
-import searchIcon from '../../assists/searchIcon.png';
+// import searchIcon from '../../assists/searchIcon.png';
 import * as React from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
 import classes from "../../styles/SearchInput.module.css";
@@ -17,7 +17,7 @@ export default function CustomInputAutocomplete() {
 
             <input type="text" {...params.inputProps}
                className={classes.inputSearch}
-               style={{    backgroundImage : `url(${searchIcon})`,}}
+              //  style={{    backgroundImage : `url(${searchIcon})`,}}
              />
 
           </div>
