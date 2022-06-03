@@ -17,7 +17,7 @@ import Image from 'next/image'
 
 export default function SlideShow() {
  
-    const assets = [omKulthom , suad , ahmedZakiy , Zbeda ]
+    const assets = [omKulthom , suad , ahmedZakiy , Zbeda , hend ]
 
   return (
 <Swiper autoplay={{ delay: 5000, disableOnInteraction: false, }} speed ={1500} 
@@ -26,6 +26,7 @@ export default function SlideShow() {
 {assets.map((el)=>{
 return (
     <SwiperSlide>      
+
             <Image layout="fill" objectFit="cover"  src={el} />
     </SwiperSlide>
  )})
