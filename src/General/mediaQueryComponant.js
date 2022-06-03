@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 
 export const Tablet = ({ children }) => {
      const isTablet = useMediaQuery({ minWidth: 768 })
-     return isTablet ? children : null
+     return isTablet ? <section> {children} </section>  : null
  }
 
 export const Mobile = ({ children }) => {

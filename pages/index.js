@@ -7,7 +7,7 @@ const Home =()=>{
           <Head>
             <title> Nostalega </title>
            </Head>
-        {/* <Navbar /> */}
+        <Navbar />
         <HomeHeader />
         <p>راندا محمد</p>
         </>

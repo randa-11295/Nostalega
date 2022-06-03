@@ -6,7 +6,7 @@ import MainTitle from "../Text/MainTitle";
 
 const HomeHeader =()=>{
     return(
-        <Box sx={{background : "blaxk" , height : "600px" ,  position: "relative",
+        <Box  component="header"  sx={{background : "blaxk" , height : "600px" ,  position: "relative",
         flexDirection: {xs : 'column' , md : "row", }, ...flexStyle()}}  >
 
             <Box sx={{ height :{ xs : "40%" , md :"100%"} ,

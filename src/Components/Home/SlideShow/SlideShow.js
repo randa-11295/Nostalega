@@ -11,7 +11,8 @@ import ahmedZakiy from "../../../../public/photos/HomeSlider/ahmedZakiy.png";
 import omKulthom from "../../../../public/photos/HomeSlider/omKulthom.jpg";
 import suad from "../../../../public/photos/HomeSlider/suad.jpg";
 import Zbeda from "../../../../public/photos/HomeSlider/Zbeda.jpg";
-import hend from "../../../../public/photos/HomeSlider/hend.jpg"
+import hend from "../../../../public/photos/HomeSlider/hend.jpg";
+import { v4 as uuidv4 } from 'uuid';
 
 import Image from 'next/image'
 
@@ -25,9 +26,9 @@ export default function SlideShow() {
 >
 {assets.map((el)=>{
 return (
-    <SwiperSlide>      
+    <SwiperSlide key={uuidv4()}>      
 
-            <Image layout="fill" objectFit="cover"  src={el} />
+            <Image layout="fill" objectFit="cover"  priority={true} alt="كلاسك صور " src={el} />
     </SwiperSlide>
  )})
 }

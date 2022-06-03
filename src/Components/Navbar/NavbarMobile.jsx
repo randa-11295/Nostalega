@@ -34,9 +34,9 @@ export default function ButtonAppBar(props) {
     }
 
   return (
-    <Box sx={{ flexGrow: 1 ,}} component='nav' >
+    <Box sx={{ flexGrow: 1 ,}}  >
       
-      <AppBar  sx={{ padding : 0 , bgcolor:"secondary.main"  , }}>
+      <AppBar component='nav'  sx={{ padding : 0 , bgcolor:"secondary.main"  , }}>
 
         {/* tap */}
         <Toolbar>
