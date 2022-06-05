@@ -7,10 +7,9 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Collapse from '@mui/material/Collapse';
-import SearchInput from '../comman/SearchInput';
 import Divider from '@mui/material/Divider';
 import {flexStyle} from '../../General/genralStyle';
-
+import { v4 as uuid } from 'uuid';
 
 const titleStyle = { flexGrow: 1, 
                   fontWeight : 800 ,
@@ -33,61 +32,50 @@ export default function ButtonAppBar(props) {
       setChecked(false);
     }
 
-  return (
-    <Box sx={{ flexGrow: 1 ,}}  >
-      
-      <AppBar component='nav'  sx={{ padding : 0 , bgcolor:"secondary.main"  , }}>
+return (
+<Box sx={{ flexGrow: 1 ,}}  >
 
-        {/* tap */}
-        <Toolbar>
-          <IconButton
-            size="small"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-            onClick ={handleNavbarChange}
-          >
-            <MenuIcon />
-          </IconButton>
+<AppBar component='nav'  sx={{ padding : 0 , bgcolor:"secondary.main"  , }}>
 
-          <Typography variant="h6" component="h6" sx={titleStyle}>
-                       art line
-          </Typography>
+{/* tap */}
+<Toolbar>
+<IconButton
+size="small"
+edge="start"
+color="inherit"
+aria-label="menu"
+sx={{ mr: 2 }}
+onClick ={handleNavbarChange}
+>
+<MenuIcon />
+</IconButton>
 
-          <Button color="inherit">Login</Button>
-        </Toolbar>
+<Typography variant="h6" component="h6" sx={titleStyle}>
+art line
+</Typography>
 
-        {/* menu */}
-        <Collapse in={checked}>
-        <Box sx={{height : '93vh'}} >
-          <Box sx={{ width : '80%' , margin : 'auto',  ...flexStyle() ,  flexDirection: 'column'}} >
-             <SearchInput />
-           
-            {   
-               props.routeData.map((el)=>{
-                return( <Box sx={{ width : '100%' , textAlign: 'center' }}
-                   key={el.id}>
-                
-                           <Divider sx={{width :'70%' ,  margin : '13px auto'}} />
-                                             
-                            <Button 
-                                 onClick={()=>{ clivkMobNavHandel(el.text)}}  
-                                 key={el.id} color="inherit">
+<Button color="inherit">Login</Button>
+</Toolbar>
 
-                               {el.text}
-                               
-                            </Button>
-            
-                        </Box>
-                )
-              })
-            }
-            </Box>
-        </Box>
-        </Collapse>
+{/* menu */}
+<Collapse in={checked}>
+<Box sx={{height : '93vh'}} >
+<Box sx={{ width : '80%' , margin : 'auto',  ...flexStyle() ,  flexDirection: 'column'}} >
+{props.routeData.map((el)=>{
+return( 
+<Box sx={{ width : '100%' , textAlign: 'center' }} key={uuid()}>
+  <Divider sx={{width :'70%' ,  margin : '13px auto'}} />
+     <Button onClick={()=>{ clivkMobNavHandel(el.text)}} key={el} color="inherit">
+        {el.text}    
+    </Button>
+</Box>
+)})}
 
-      </AppBar>
-    </Box>
-  );
+</Box>
+</Box>
+</Collapse>
+
+</AppBar>
+</Box>
+);
 }

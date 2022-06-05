@@ -1,0 +1,14 @@
+.input {
+    width : 100%;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--creemy);
+    border-radius: 15px;
+    padding: 5px 15px 5px 40px;
+    border: 1px solid var(--creemy);
+    transition: .3s;
+}
+
+.input:hover , .input:focus {
+    border: 1px solid var(--smoothRed);
+}
+

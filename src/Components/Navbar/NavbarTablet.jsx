@@ -8,7 +8,10 @@ import Button from '@mui/material/Button';
 import {flexStyle} from '../../General/genralStyle.js';
 import UserMenu  from './UserMenu';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
-import SearchInput from '../comman/SearchInput';
+import { v4 as uuid } from 'uuid';
+import Logo from "../Text/Logo";
+import ContainerBox from '../../HOC/ContainerBox.js';
+import SearchInputTablet from '../comman/searchInputTablet/SearchInputTablet';
 
 const buttonStyle={
   fontSize:{sm: '.9rem' , md : '1rem'},
@@ -37,39 +40,31 @@ changeNavbarColor()
 
 window.addEventListener('scroll', changeNavbarColor);
 return () => {
-  window.removeEventListener('scroll', changeNavbarColor);
+window.removeEventListener('scroll', changeNavbarColor);
 }
 
 })
 
-  return (
-    
-<Box   component="header"  sx={{ flexGrow: 1 }}>
-<AppBar  sx={{ bgcolor: colorChange , boxShadow : "none" , transition : ".3s" }}>
-<Toolbar sx={{ ...flexStyle('space-between')}}>
-
-<Box sx={{  ...flexStyle('space-between'),
-  width :  { sm :'80%' ,md : '75%' , lg : '55%' } }}>
-  
-<Typography variant="h6" component="h6" >
-            نوستاليجا
-</Typography>
-{ props.routeData.map((el)=>{
-    return  <Button onClick={()=>{ props.routeChange(el.text)}} sx={buttonStyle} key={el.id} color="inherit">
-                {el.text}
+return (
+<AppBar component="nav" sx={{ background :colorChange ,  boxShadow : "none" , transition : ".3s"  ,}}>
+<ContainerBox>
+<Toolbar sx={{ ...flexStyle('space-between') ,  padding :"0px !important" , }}  >
+  <Box sx={{  ...flexStyle('space-between'),   }}>  
+  <Logo />
+  <SearchInputTablet />
+  llll
+  { props.routeData.map((el)=>{
+      return  <Button onClick={()=>{ props.routeChange(el.text)}} sx={buttonStyle} key={uuid()} color="inherit">
+                  {el}
               </Button>})
-}
-
-<Box sx={{width:{ sm : '200px' , md : '250px' , lg : '300p'}}} >
-    kkkkkkk
-</Box>
-</Box>
-
-  <Box sx={{ ...flexStyle()}}  >
-      <UserMenu />
+  }
   </Box>
+
+ <UserMenu />
+ 
+
 </Toolbar>
+</ContainerBox>
 </AppBar>
-</Box>
-          );
+ );
 }

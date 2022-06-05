@@ -2,22 +2,19 @@ import {  createTheme } from '@mui/material/styles';
 
  const theme =   createTheme({
     palette: {
+         // smooth red
           primary: {               
-              main: '#FBBB4F',
-              contrastText : '#524439'
+              main: '#da6868',
+              contrastText : '#f6dec4'
+
          },
+         //   creamy  
          secondary:  {               
-              main: '#f3ebe4',
-              light :'#f3ebe4c1'
-         },
-         info:  {               
-              main: '#A46855',
-         },
-         success :  {               
-              main: '#005247',
-         },
-     },
-   
+              main: '#f6dec4',
+              contrastText : '#000'
+  
+         },   
+     },  
   })
 
   export default theme
