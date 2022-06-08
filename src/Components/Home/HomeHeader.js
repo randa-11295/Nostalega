@@ -17,7 +17,7 @@ const HomeHeader =()=>{
                                                  </Box>
 
             <Box sx={{ width : { xs : "100%" , md :"60%"} , 
-                      height : { xs : "60%" , md :"100%"}  }} >
+                       height : { xs : "60%" , md :"100%"}  }} >
                 <SlideShow />
            
             </Box>

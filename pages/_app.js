@@ -6,7 +6,7 @@ import Navbar from "../src/Components/Navbar/Navbar"
 function MyApp({ Component, pageProps }) {
       return (
         <ThemeProvider theme={theme}>
-              <Navbar />
+             <Navbar />
              <Component {...pageProps} />
         </ThemeProvider>
         )

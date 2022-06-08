@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 
 
-export default function MainTitle() {
+export default function MainTitle(props) {
 
 const TextStyle ={ 
   fontFamily: 'Noto Nastaliq Urdu', 
@@ -10,7 +10,7 @@ const TextStyle ={
                   }
 
 return (<Typography variant="h1" component="h1"  sx={TextStyle} >      
-            نوستاليجا
+             نوستاليجا
         </Typography>
 
 )}

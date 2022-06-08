@@ -49,16 +49,18 @@ return (
 <AppBar component="nav" sx={{ background :colorChange ,  boxShadow : "none" , transition : ".3s"  ,}}>
 <ContainerBox>
 <Toolbar sx={{ ...flexStyle('space-between') ,  padding :"0px !important" , }}  >
-  <Box sx={{  ...flexStyle('space-between'),   }}>  
-  <Logo />
-  <SearchInputTablet />
-  llll
+  
+<Logo />
+<Box sx={{width : '35%'}}>
+<SearchInputTablet />
+</Box>
+ <Box>
   { props.routeData.map((el)=>{
       return  <Button onClick={()=>{ props.routeChange(el.text)}} sx={buttonStyle} key={uuid()} color="inherit">
                   {el}
               </Button>})
   }
-  </Box>
+ </Box>
 
  <UserMenu />
  

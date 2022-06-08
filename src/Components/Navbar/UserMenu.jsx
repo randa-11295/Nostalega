@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -20,16 +21,13 @@ export default function UserMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  return (
-    <>
-
-    <IconButton
+  return (<>
+    <Button
       onClick={handleClick}
-      aria-haspopup="true"
-      aria-expanded={open ? 'true' : undefined}
+      color="inherit"
     >
-            <PersonIcon fontSize="large" sx={{color : "white"}} />
-    </IconButton  >
+      تسحيل
+    </Button  >
 
 <Menu
   anchorEl={anchorEl}
