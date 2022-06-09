@@ -12,5 +12,6 @@ const TextStyle ={
 return (<Typography variant="h1" component="h1"  sx={TextStyle} >      
              نوستاليجا
         </Typography>
+        
 
 )}
