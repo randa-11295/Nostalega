@@ -1,0 +1,92 @@
+
+
+
+.aboutSiteBanner {
+    background: red;
+    height: 550px;
+   
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.aboutSiteBanner .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: rgb(159, 127, 255);
+}
+
+.aboutSiteBanner .content .play {
+    width: 50px;
+    height: 50px;
+    background: var(--Main-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: auto;
+    margin-bottom: 33px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(6, 91, 63) ;
+
+}
+
+
+
+
+
+.aboutSiteBanner .content .play:hover {
+    background: #fff;
+    
+}
+
+.aboutSiteBanner .content .play::after,
+.aboutSiteBanner .content .play::before {
+    -webkit-animation: video-box-shadow 1600ms ease-in-out 0ms;
+    animation: video-box-shadow 1600ms ease-in-out 0ms;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    width: 100%;
+    height: 100%;
+    content: "";
+    top: 0;
+    position: absolute;
+    border-radius: 50%;
+    transition: transform .3s ease-in-out;
+}
+
+.aboutSiteBanner .content .play::after {
+    -webkit-animation-delay: 800ms;
+    animation-delay: 800ms;
+}
+
+@keyframes video-box-shadow {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: .6;
+        -webkit-box-shadow: 0 0 0 0 #fff;
+        box-shadow: 0 0 0 0 #fff
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: .3;
+        -webkit-box-shadow: 0 0 0 4px #fff;
+        box-shadow: 0 0 0 4px #fff
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 0 8px #fff;
+        box-shadow: 0 0 0 8px #fff;
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+        opacity: 0
+    }
+}
+
