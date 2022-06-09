@@ -4,13 +4,13 @@ import {  createTheme } from '@mui/material/styles';
     palette: {
          // smooth red
           primary: {               
-              main: '#da6868',
+              main: '#d15050',
               contrastText : '#f6dec4'
 
          },
          //   creamy  
          secondary:  {               
-              main: '#f6dec4',
+              main: '#ece4db',
               contrastText : '#000'
   
          },   

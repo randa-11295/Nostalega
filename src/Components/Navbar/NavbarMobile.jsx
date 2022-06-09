@@ -9,7 +9,7 @@ export default function MenuAppBar() {
 
   return (
     
-      <AppBar sx={{background : "black"}}>
+      <AppBar sx={{background : "var(--lightBlack)"}}>
         <Toolbar>
           <IconButton
             size="large"

@@ -1,14 +1,15 @@
 :root {
-  --creemy: #f6dec4;
-  --smoothRed: #da6868;
+  --creemy: #ece4db;
+  --smoothRed: #d15050;
+  --lightBlack : #151515
 }
 
 html,
 body {
   direction: rtl;
   font-family:  'Noto Naskh Arabic', Arial, Helvetica, sans-serif;
-  background-color: black;
-  color: #f6dec4;
+  background-color: var(--lightBlack);
+  color: var(--creemy);
   scroll-behavior: smooth;
 }
 

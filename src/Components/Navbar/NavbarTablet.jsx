@@ -18,18 +18,18 @@ const buttonStyle={
 
 export default function NavbarTablet(props) {
 
-const [colorChange, setColorchange] = useState('black');
+const [colorChange, setColorchange] = useState('var(--lightBlack)');
 
 useEffect(()=>{
 
 const changeNavbarColor = () =>{
 if(window.scrollY <= 40){
   let numHightY =  window.scrollY  / 40
-  setColorchange(`rgba(0, 0, 0,${numHightY});`);
+  setColorchange(`rgba(21, 21, 21,${numHightY});`);
 }
 
 else{
-  setColorchange('black');
+  setColorchange('var(--lightBlack)');
 }
 };
 
