@@ -6,7 +6,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 const btnStyle ={
       color : 'secondary.main',
       border : 'solid 1px var(--creemy)',
-      marginLeft : '10px',
+      marginLeft : '15px',
       transition: '.3s ease-in-out all' ,
       '&:hover': {
         border : 'solid 1px var(--smoothRed)',
@@ -17,7 +17,7 @@ const btnStyle ={
 export default function IconCustomButton(props) {
   return (
     <Tooltip title={props.title} arrow>
-      <IconButton size='small' sx={btnStyle}>
+      <IconButton  sx={btnStyle}>
          {props.children}
       </IconButton>
     </Tooltip>

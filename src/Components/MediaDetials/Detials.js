@@ -8,69 +8,82 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import IconCustomButton from "../comman/IconCustomButton";
 import DownloadIcon from '@mui/icons-material/Download';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+import * as React from 'react';
+import Grid from '@mui/material/Grid';
 
-const containImage = {  width : {xs : '280px'},
-                       height :{ xs : "380px" },
+const containImage = {  width : {xs : '250px'},
+                       height :{ xs : "350px" },
                       overflow : "hidden"  ,
                       padding : "0" ,
-                      margin : "auto" ,
-                      borderRadius : "8px" ,
+                      margin :{ xs :"auto"  , md : '0'},
+                      borderRadius : "12px" ,
                       filter: "grayscale(98%)",
-                      background : "green"} 
+                      background : "green"
+                    } 
 
  const TextStyle ={  
-                    margin : " 35px 0 50px",
+                    margin : {xs: " 35px 0 50px" , md: "0 0 50px"},
                     fontFamily: 'Noto Nastaliq Urdu',                 
-                    fontSize : {xs : '2.2rem' ,  } ,
+                    fontSize : {xs : '2.2rem' ,  md : "2.2"  } ,
                   }
 
 const pragStyle ={
       lineHeight : "  1.8rem",
-      wordSpacing: '2px'
+      wordSpacing: '2px',
+      margin : { md : "5px 0 20px"}
 }
 
 const Detials = ()=>{
-    return (<Box>
-                <Box sx={containImage}>
-                    <Image objectFit="cover" alt="movie bannar " src={bannar} />
-                </Box>
-                <Box sx={{ textAlign:{ xs: 'center' , md : "right"} }}>
-                   <Typography variant="h3" component="h3"  sx={TextStyle} >      
-                        أميرة حبي انا
-                  </Typography>   
+    return (
+<Grid container  sx= {{padding : {xs : "80px 0" ,  md : "120px 0"}}} >
+   <Grid item xs={12} md={4} lg={3.5} >
 
-                  <Typography variant="b" component="b"     >      
-                     موسم واحد - فيلم - 1974
-                  </Typography> 
+      <Box sx={containImage}>
+          <Image objectFit="cover" alt="movie bannar " src={bannar} />
+      </Box>
 
-                   <TypeDetils />
-                     
-                  <Typography variant="p" component="p"  sx={pragStyle}    >      
-                  ميرة حبي أنا فيلم مصري إنتاج عام 1974م، بطولة سعاد حسني ، حسين فهمي
-                   ، سمير غانم ، كريمة مختار ، عماد حمدي . تدور أحداث الفيلم حول عادل نجيب الذي يعمل في شركة ومتزوج من أماني ابنة رئيس الشركة. يقع عادل في حب فتاة اسمها «أميرة» تعمل في نفس الشركة، وتستمر
-                    أحداث الفيلم بالتصاعد بعد أن يعرف والد نبيلة بعلاقة أميرة وعادل.
-                  </Typography>    
-                  
-                  <Box sx={{margin : "20px 0"}} >
-                    <ButtonComponant >
-                        مشاهدة الفيلم
-                       <PlayArrowIcon sx={{ mr: 1 , transform : "rotate(180deg)" }} fontSize="small" /> 
-                    </ButtonComponant>
-                    
-                    <IconCustomButton title="Add to My List"  >
-                        <PlaylistAddIcon />
-                    </IconCustomButton>
+  </Grid>
+     <Grid item xs={12} md={8} lg={8.5} >
 
-                      <IconCustomButton  title="Download" >
-                          <DownloadIcon />
-                      </IconCustomButton>
-                    
-                  </Box>
+      <Box sx={{ textAlign:{ xs: 'center' , md : "right"}  , padding : {xs : "0 20px"} }}>
+      <Typography variant="h3" component="h3"  sx={TextStyle} >      
+            أميرة حبي انا
+      </Typography>   
 
-                </Box>
+      <Typography variant="b" component="b"     >      
+        موسم واحد - فيلم - 1974
+      </Typography> 
 
-            </Box>
-    )
+      <TypeDetils />
+        
+      <Typography variant="p" component="p"  sx={pragStyle}    >      
+      اميرة حبي أنا فيلم مصري إنتاج عام 1974م، بطولة سعاد حسني ، حسين فهمي
+      ، سمير غانم ، كريمة مختار ، عماد حمدي . تدور أحداث الفيلم حول عادل نجيب الذي يعمل في شركة ومتزوج من أماني ابنة رئيس الشركة. يقع عادل في حب فتاة اسمها «أميرة» تعمل في نفس الشركة، وتستمر
+        أحداث الفيلم بالتصاعد بعد أن يعرف والد نبيلة بعلاقة أميرة وعادل.
+      </Typography>    
+
+      <Box sx={{margin : "20px 0"}} >
+        <ButtonComponant >
+            مشاهدة الفيلم
+          <PlayArrowIcon sx={{ mr: 1 , transform : "rotate(180deg)" }} fontSize="small" /> 
+        </ButtonComponant>
+        
+        <IconCustomButton title="Add to My List"  >
+            <PlaylistAddIcon />
+        </IconCustomButton>
+
+          <IconCustomButton  title="Download" >
+              <DownloadIcon />
+          </IconCustomButton>
+        
+      </Box>
+
+      </Box>
+
+  </Grid>
+</Grid>
+
+)
 }
 
 export default Detials

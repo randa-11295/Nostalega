@@ -4,7 +4,7 @@ import Fab from '@mui/material/Fab';
 const ButtonComponant =(props)=>{
 
 return   (
-<Fab variant="extended" size="small" color="primary" aria-label="add" sx={{ marginLeft: 1 }} >
+<Fab variant="extended"  color="primary" aria-label="add" sx={{ marginLeft: "15px" }} >
   {props.children}
 </Fab>
 

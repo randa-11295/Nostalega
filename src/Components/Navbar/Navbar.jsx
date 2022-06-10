@@ -10,7 +10,7 @@ const [innerCumponentWidth , setInnerCumponentWidth ] = useState(true)
   
 useEffect(()=>{
 const resizeListener = () => {
-if (window.innerWidth > 768){
+if (window.innerWidth > 900){
   setInnerCumponentWidth(true)
 }
 else{setInnerCumponentWidth(false)}
