@@ -12,7 +12,7 @@ const media =() =>{
             <Detials />
              
              <ImageCover />
-            {/* <Video /> */}
+            <Video />
         </ContainerBox >
     )
 }

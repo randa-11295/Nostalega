@@ -5,6 +5,9 @@ import Typography from '@mui/material/Typography';
 import TypeDetils from "./TypeDetils";
 import ButtonComponant from "../comman/ButtonComponant";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import IconCustomButton from "../comman/IconCustomButton";
+import DownloadIcon from '@mui/icons-material/Download';
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 
 const containImage = {  width : {xs : '280px'},
                        height :{ xs : "380px" },
@@ -20,6 +23,11 @@ const containImage = {  width : {xs : '280px'},
                     fontFamily: 'Noto Nastaliq Urdu',                 
                     fontSize : {xs : '2.2rem' ,  } ,
                   }
+
+const pragStyle ={
+      lineHeight : "  1.8rem",
+      wordSpacing: '2px'
+}
 
 const Detials = ()=>{
     return (<Box>
@@ -37,7 +45,7 @@ const Detials = ()=>{
 
                    <TypeDetils />
                      
-                  <Typography variant="p" component="p"      >      
+                  <Typography variant="p" component="p"  sx={pragStyle}    >      
                   ميرة حبي أنا فيلم مصري إنتاج عام 1974م، بطولة سعاد حسني ، حسين فهمي
                    ، سمير غانم ، كريمة مختار ، عماد حمدي . تدور أحداث الفيلم حول عادل نجيب الذي يعمل في شركة ومتزوج من أماني ابنة رئيس الشركة. يقع عادل في حب فتاة اسمها «أميرة» تعمل في نفس الشركة، وتستمر
                     أحداث الفيلم بالتصاعد بعد أن يعرف والد نبيلة بعلاقة أميرة وعادل.
@@ -48,7 +56,14 @@ const Detials = ()=>{
                         مشاهدة الفيلم
                        <PlayArrowIcon sx={{ mr: 1 , transform : "rotate(180deg)" }} fontSize="small" /> 
                     </ButtonComponant>
+                    
+                    <IconCustomButton title="Add to My List"  >
+                        <PlaylistAddIcon />
+                    </IconCustomButton>
 
+                      <IconCustomButton  title="Download" >
+                          <DownloadIcon />
+                      </IconCustomButton>
                     
                   </Box>
 

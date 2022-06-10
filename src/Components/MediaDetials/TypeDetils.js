@@ -8,7 +8,7 @@ export default function TypeDetils() {
 const typsMovie = [ 'رومانسي' ,'كوميدي'  , 'كوميدي' ,'دراما' ]
 
 return (
-  <Box sx={{padding : "15px"}}>
+  <Box sx={{padding : {xs : "15px" , md : "0"}}}>
     { typsMovie.map((el)=>{
         return (
         <Chip  size="small"  label={el}  variant="outlined"  color="secondary"
