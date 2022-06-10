@@ -5,7 +5,7 @@ import {  createTheme } from '@mui/material/styles';
          // smooth red
           primary: {               
               main: '#d15050',
-              contrastText : '#f6dec4'
+              contrastText : '#fff'
 
          },
          //   creamy  

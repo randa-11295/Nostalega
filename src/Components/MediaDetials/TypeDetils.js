@@ -4,14 +4,19 @@ import Chip from '@mui/material/Chip';
 
 
 export default function TypeDetils() {
-  return (
-    <Box >
-     
-            <Chip  size="small"  label="رومانسي" variant="outlined" color="secondary" />
+   
+const typsMovie = [ 'رومانسي' ,'كوميدي'  , 'كوميدي' ,'دراما' ]
 
-            <Chip size="small"  label="رومانسي"  variant="outlined" color="secondary" />
+return (
+  <Box sx={{padding : "15px"}}>
+    { typsMovie.map((el)=>{
+        return (
+        <Chip  size="small"  label={el}  variant="outlined"  color="secondary"
+                sx={{margin : "5px"}} />
+        )
+      })
+    }
 
-            <Chip size="small"  label="رومانسي"  variant="outlined" color="secondary" />  
-    </Box>
-  );
+  </Box>
+);
 }

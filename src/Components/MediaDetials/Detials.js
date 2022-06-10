@@ -3,9 +3,11 @@ import Image from "next/image"
 import bannar from "../../../public/photos/HomeSlider/bannar.jpg"
 import Typography from '@mui/material/Typography';
 import TypeDetils from "./TypeDetils";
+import ButtonComponant from "../comman/ButtonComponant";
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
-const containImage = {width :{xs: "80%" }, 
-                       height :{ xs : "340px" },
+const containImage = {  width : {xs : '280px'},
+                       height :{ xs : "380px" },
                       overflow : "hidden"  ,
                       padding : "0" ,
                       margin : "auto" ,
@@ -14,9 +16,9 @@ const containImage = {width :{xs: "80%" },
                       background : "green"} 
 
  const TextStyle ={  
-                    margin : " 30px 0 ",
+                    margin : " 35px 0 50px",
                     fontFamily: 'Noto Nastaliq Urdu',                 
-                    fontSize : {xs : '1.5rem' ,  } ,
+                    fontSize : {xs : '2.2rem' ,  } ,
                   }
 
 const Detials = ()=>{
@@ -24,22 +26,31 @@ const Detials = ()=>{
                 <Box sx={containImage}>
                     <Image objectFit="cover" alt="movie bannar " src={bannar} />
                 </Box>
-                <Box sx={{width : "80%"  , margin : "auto"}}>
-                   <Typography variant="h3" component="h3"     sx={TextStyle} >      
+                <Box sx={{ textAlign:{ xs: 'center' , md : "right"} }}>
+                   <Typography variant="h3" component="h3"  sx={TextStyle} >      
                         أميرة حبي انا
                   </Typography>   
 
                   <Typography variant="b" component="b"     >      
-                     موسم واحد  - (1974) - فيلم 
+                     موسم واحد - فيلم - 1974
                   </Typography> 
 
                    <TypeDetils />
                      
-                  <Typography variant="p" component="p"     sx={{}} >      
+                  <Typography variant="p" component="p"      >      
                   ميرة حبي أنا فيلم مصري إنتاج عام 1974م، بطولة سعاد حسني ، حسين فهمي
                    ، سمير غانم ، كريمة مختار ، عماد حمدي . تدور أحداث الفيلم حول عادل نجيب الذي يعمل في شركة ومتزوج من أماني ابنة رئيس الشركة. يقع عادل في حب فتاة اسمها «أميرة» تعمل في نفس الشركة، وتستمر
                     أحداث الفيلم بالتصاعد بعد أن يعرف والد نبيلة بعلاقة أميرة وعادل.
                   </Typography>    
+                  
+                  <Box sx={{margin : "20px 0"}} >
+                    <ButtonComponant >
+                        مشاهدة الفيلم
+                       <PlayArrowIcon sx={{ mr: 1 , transform : "rotate(180deg)" }} fontSize="small" /> 
+                    </ButtonComponant>
+
+                    
+                  </Box>
 
                 </Box>
 
