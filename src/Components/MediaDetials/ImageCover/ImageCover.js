@@ -1,19 +1,18 @@
 import classes from "./ImageCover.module.css"
+import bannar from "../../../../public/photos/HomeSlider/suad.jpg"
+import Image from "next/image"
 
 const ImageCover = () => {
-    return <div className={classes.aboutSite}>
-                <div className={classes.aboutSiteBanner}>
-                    <div className={classes.content}>
-                        <div>
-                            <a href="assets/images/videos/vid.mp4" className={classes.videoBtn }>
-                                <div className={classes.play}><i > +  </i></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>  
-            </div>
-      
-}
+return (
+<section className={classes.box}>
+  <Image objectFit="cover" alt="movie bannar " src={bannar} />
+     <div className={classes.content}>
+        
+                    <aside className={classes.play}> +  </aside>
+     </div>
+            
+</section>      
+)}
 
 
 export default ImageCover
