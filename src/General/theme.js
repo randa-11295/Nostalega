@@ -5,12 +5,12 @@ import {  createTheme } from '@mui/material/styles';
          // smooth red
           primary: {               
               main: '#d15050',
-              contrastText : '#fff'
+              contrastText : '#f1e9e1'
 
          },
          //   creamy  
          secondary:  {               
-              main: '#ece4db',
+              main: '#f1e9e1',
               contrastText : '#000'
   
          },   

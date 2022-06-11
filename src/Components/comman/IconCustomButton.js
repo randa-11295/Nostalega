@@ -3,7 +3,14 @@ import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
-const btnStyle ={
+export default function IconCustomButton(props) {
+
+  const staticBtn  ={
+    color : 'primary.main',
+    border : 'solid 1px var(--smoothRed)',
+  } 
+
+const hoverBtn ={
       color : 'secondary.main',
       border : 'solid 1px var(--creemy)',
       marginLeft : '15px',
@@ -14,10 +21,10 @@ const btnStyle ={
          },
         }
 
-export default function IconCustomButton(props) {
+
   return (
-    <Tooltip title={props.title} arrow>
-      <IconButton  sx={btnStyle}>
+    <Tooltip title={props.title}   placement={props.small?  "left" : "button"}>
+      <IconButton size={props.small?  "small" : ""}  sx={props.small?  staticBtn : hoverBtn } >
          {props.children}
       </IconButton>
     </Tooltip>

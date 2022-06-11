@@ -7,7 +7,7 @@ const category =()=>{
     }
     return (
         <Box sx={boxStyle}>
-         <MovieCard />
+            <MovieCard />
         </Box>
     )
 }

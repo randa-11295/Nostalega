@@ -4,11 +4,11 @@ import bannar from "../../../public/photos/HomeSlider/bannar.jpg"
 import Typography from '@mui/material/Typography';
 import TypeDetils from "./TypeDetils";
 import ButtonComponant from "../comman/ButtonComponant";
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import PlayIcon from "../comman/PlayIcon";
 import IconCustomButton from "../comman/IconCustomButton";
 import DownloadIcon from '@mui/icons-material/Download';
-import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
-import * as React from 'react';
+
+
 import Grid from '@mui/material/Grid';
 
 const containImage = {  width : {xs : '250px'},
@@ -64,7 +64,7 @@ const Detials = ()=>{
       <Box sx={{margin : "20px 0"}} >
         <ButtonComponant >
             مشاهدة الفيلم
-          <PlayArrowIcon sx={{ mr: 1 , transform : "rotate(180deg)" }} fontSize="small" /> 
+            <PlayIcon />
         </ButtonComponant>
         
         <IconCustomButton title="Add to My List"  >

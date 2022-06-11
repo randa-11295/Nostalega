@@ -3,8 +3,14 @@ import Fab from '@mui/material/Fab';
 
 const ButtonComponant =(props)=>{
 
+  const styleBtn ={ marginLeft: "15px" , 
+                    boxShadow : "none" ,
+                   fontFamily: 'Noto Naskh Arabic', }
+
 return   (
-<Fab variant="extended"  color="primary" aria-label="add" sx={{ marginLeft: "15px" , fontFamily: 'Noto Naskh Arabic', }} >
+<Fab variant="extended" size={props.small?  "small" : ""}  color="primary" 
+     aria-label="add" sx={styleBtn} >
+
   {props.children}
 </Fab>
 
