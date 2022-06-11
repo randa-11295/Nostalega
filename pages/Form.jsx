@@ -2,7 +2,7 @@ import {useState} from 'react';
 import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import  bg  from '../assists/bgKatchan.jpg'
+// import  bg  from '../assists/bgKatchan.jpg'
 import SignUpForm from '../componants/Form/SignUpForm';
 
 
@@ -59,7 +59,8 @@ export default function Form(props) {
     left : {xs : '0', md : LeftMovementEl, },
     zIndex: '4',
     transition: '.5s ease-in-out top , .5s ease-in-out  left ' ,
-    backgroundImage : `url(${bg})`,
+    background : "green" ,
+    // backgroundImage : `url(${bg})`,
     backgroundSize: {xs :'auto 100vh',  md: '100vw auto'},
     backgroundAttachment: 'fixed',
     backgroundPosition: 'top center',

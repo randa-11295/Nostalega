@@ -17,18 +17,17 @@ const containImage = {  width : {xs : '250px'},
                       padding : "0" ,
                       margin :{ xs :"auto"  , md : '0'},
                       borderRadius : "12px" ,
-                      filter: "grayscale(98%)",
-                      background : "green"
+                      filter: "grayscale(100%)",
                     } 
 
- const TextStyle ={  
-                    margin : {xs: " 35px 0 50px" , md: "0 0 50px"},
+ const TextStyle ={ margin : {xs: " 35px 0 50px" , md: "0 0 50px"},
                     fontFamily: 'Noto Nastaliq Urdu',                 
-                    fontSize : {xs : '2.2rem' ,  md : "2.2"  } ,
+                    fontSize : {xs : '2.2rem' ,  md : "2.5rem"  } ,
                   }
 
 const pragStyle ={
       lineHeight : "  1.8rem",
+      fontFamily: 'Noto Naskh Arabic',     
       wordSpacing: '2px',
       margin : { md : "5px 0 20px"}
 }
@@ -50,7 +49,7 @@ const Detials = ()=>{
             أميرة حبي انا
       </Typography>   
 
-      <Typography variant="b" component="b"     >      
+      <Typography variant="b" component="b"  sx={{fontFamily: 'Noto Naskh Arabic',}}    >      
         موسم واحد - فيلم - 1974
       </Typography> 
 

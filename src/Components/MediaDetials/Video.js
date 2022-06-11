@@ -16,7 +16,7 @@ const vedioStyle ={
 }
 
 const Video =() =>{
-const [runVideo , setRunVideo]  = useState(false)
+const [runVideo , setRunVideo]  = useState(true)
 
 return(
 <Box sx={vedioStyle} >

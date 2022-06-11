@@ -11,7 +11,7 @@ return (
   <Box sx={{padding : {xs : "15px" , md : "15px 0 20px"}}}>
     { typsMovie.map((el)=>{
         return (
-        <Chip  key={uuid()}   sx={{marginLeft : {xs :"6px" , sm : "10px" , } ,marginTop : '8px',  padding :  "0px 3px" }} label={el}  variant="outlined"  color="secondary"
+        <Chip  key={uuid()}   sx={{marginLeft : {xs :"6px" , sm : "10px" , } ,marginTop : '8px',  padding :  "0px 3px" ,fontFamily: 'Noto Naskh Arabic', }} label={el}  variant="outlined"  color="secondary"
              />
         )
       })
