@@ -11,7 +11,7 @@ const MovieCard =()=>{
 
 const BoxStyle = {
     background : "var(--creemy)",
-    margin : "auto" , 
+    margin : " 40px " , 
     width : "260px" ,
     borderRadius : "12px",
     color : "black" ,
@@ -20,7 +20,7 @@ const BoxStyle = {
 
 const containImage = { 
     outline : '1px solid var(--smoothRed)',
-    height : "230px" ,
+    height : "200px" ,
     overflow : "hidden"  ,
     margin :"auto"  , 
     borderRadius : "12px" ,
@@ -30,17 +30,19 @@ const containImage = {
 
 
 const TextStyle ={ 
-    marginTop : '10px' ,
+    marginTop : '15px' ,
     fontFamily: 'Noto Naskh Arabic',                                                                                                     
-    fontSize : '1.5rem' ,
-    fontWeight : "700" ,
+    fontSize : '1.8rem' ,
+    fontWeight : "800" ,
    
 }
 
 const pragStyle ={
-    margin: '5px' ,
+    margin: '10px' ,
     fontFamily: 'Noto Naskh Arabic',            
     fontSize : '.8rem' ,
+    fontWeight : "600" ,
+    color : "var(--Grey)"
    
 }
 return (

@@ -4,7 +4,7 @@ import Detials from "../src/Components/MediaDetials/Detials"
 
 const media =() =>{
     return(
-         <ContainerBox paddingAtTop={true} >
+         <ContainerBox paddingAtTop={true}  >
             <Detials />
             <Video />
         </ContainerBox >

@@ -5,7 +5,11 @@ const ButtonComponant =(props)=>{
 
   const styleBtn ={ marginLeft: "15px" , 
                     boxShadow : "none" ,
-                   fontFamily: 'Noto Naskh Arabic', }
+                   fontFamily: 'Noto Naskh Arabic', 
+                   '&:hover': {
+                       boxShadow : "none" ,
+                     },
+                  }
 
 return   (
 <Fab variant="extended" size={props.small?  "small" : ""}  color="primary" 

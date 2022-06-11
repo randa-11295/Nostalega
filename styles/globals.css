@@ -1,17 +1,17 @@
 :root {
-  --creemy: #f1e9e1;
+  --creemy: #f3f3f3;
+  --Grey: #8b8b8b;
   --smoothRed: #d15050;
   --lightBlack : #151515
 }
 
 html,
 body {
-  direction: rtl;
+  direction: rtl ;
   font-family:  'Noto Naskh Arabic', Arial, Helvetica, sans-serif;
   background-color: var(--lightBlack);
   color: var(--creemy);
   scroll-behavior: smooth;
-
 }
 
 a {
