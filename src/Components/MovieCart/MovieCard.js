@@ -16,7 +16,6 @@ const BoxStyle = {
     color : "black" ,
     padding : "20px" ,
     margin : "auto"
-
 }
 
 const containImage = { 

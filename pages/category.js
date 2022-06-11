@@ -9,7 +9,7 @@ import PagesBar from "../src/Components/Category/PagesBar";
 const category =()=>{
 
 const pageinstStyle ={direction: 'ltr', 
-                    margin : "20px 0 60px" , 
+                    margin : "25px 0 60px" , 
                     "& *": { color: "var(--creemy) !important" 
      }}                  
 
