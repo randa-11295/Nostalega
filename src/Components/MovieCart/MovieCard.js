@@ -11,11 +11,12 @@ const MovieCard =()=>{
 
 const BoxStyle = {
     background : "var(--creemy)",
-    margin : " 40px " , 
     width : "260px" ,
     borderRadius : "12px",
     color : "black" ,
     padding : "20px" ,
+    margin : "auto"
+
 }
 
 const containImage = { 

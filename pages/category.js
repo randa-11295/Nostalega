@@ -1,37 +1,25 @@
-import MovieCard from "../src/Components/movieCart/MovieCard"
 import Box from '@mui/material/Box'
 import Pagination from '@mui/material/Pagination';
 import {flexStyle } from "../src/General/genralStyle"
 import ContainerBox from "../src/Components/HOC/ContainerBox"
 import MovieSlideShow from "../src/Components/Category/MovieSlideShow/MovieSlideShow";
+import CategoryCardContiner from "../src/Components/Category/CategoryCardContiner";
+import PagesBar from "../src/Components/Category/PagesBar";
 
 const category =()=>{
 
 const pageinstStyle ={direction: 'ltr', 
                     margin : "20px 0 60px" , 
                     "& *": { color: "var(--creemy) !important" 
-}}                  
+     }}                  
 
-const  boxStyle ={
-    display : "flex" ,
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-}
 
-const arr = [1,2,3,4,5,6,7,8,9,10,11,12]
 return ( 
 <ContainerBox>
     <MovieSlideShow />
+    <CategoryCardContiner />
 
-    
-<Box sx={boxStyle}>
-    { arr.map((el)=>{
-        return (
-            <MovieCard />
-        )
-    })}
-</Box>
-
+<PagesBar />
 
 
 
