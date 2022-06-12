@@ -7,7 +7,7 @@ import ButtonComponant from "../comman/ButtonComponant";
 import PlayIcon from "../comman/PlayIcon";
 import IconCustomButton from "../comman/IconCustomButton";
 import DownloadIcon from '@mui/icons-material/Download';
-
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 
 import Grid from '@mui/material/Grid';
 
@@ -68,7 +68,7 @@ const Detials = ()=>{
         </ButtonComponant>
         
         <IconCustomButton title="Add to My List"  >
-            <PlaylistAddIcon />
+            <PlaylistAddIcon /> 
         </IconCustomButton>
 
           <IconCustomButton  title="Download" >
