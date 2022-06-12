@@ -35,8 +35,8 @@ const contentBox = { textAlign:{ xs: 'center' , md : "right"}  ,
 const MovieAds =()=>{
 return(
 <Box sx={boxStyle} >  
-    <Box sx={{position : "absolute" , width : "100%" , height : "100%" ,  filter: "brightness(50%)"}}>
-      <Photo path={img} />
+    <Box sx={{position : "absolute" , width : "100%" , height : "100%" ,  filter: "brightness(45%)"}}>
+        <Photo title="bannar" path={img} />
     </Box>
     <Box sx={contentBox}>
       <Typography variant="h3" component="h3"  sx={TextStyle} >      

@@ -4,7 +4,6 @@ import {flexStyle } from "../src/General/genralStyle"
 import ContainerBox from "../src/Components/HOC/ContainerBox"
 import MovieSlideShow from "../src/Components/Category/MovieSlideShow/MovieSlideShow";
 import CategoryCardContiner from "../src/Components/Category/CategoryCardContiner";
-import PagesBar from "../src/Components/Category/PagesBar";
 
 const category =()=>{
 
@@ -19,7 +18,6 @@ return (
     <MovieSlideShow />
     <CategoryCardContiner />
 
-<PagesBar />
 
 
 

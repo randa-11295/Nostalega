@@ -1,7 +1,6 @@
 import Box from "@mui/material/Box" 
 import Typography from "@mui/material/Typography" 
-// import Image from "next/image"
-import photo from "../../../public/photos/HomeSlider/bannar.jpg"
+import pathImg from "../../../public/photos/HomeSlider/bannar.jpg"
 import ButtonComponant from "../comman/ButtonComponant"
 import IconCustomButton from "../comman/IconCustomButton"
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
@@ -47,7 +46,7 @@ const pragStyle ={
 return (
 <Box component="aside" sx={ BoxStyle }>
     <Box  sx={containImage}>
-        <Photo path={photo} />
+        <Photo title="cart cover" path={pathImg} />
     </Box>
 
     <Typography variant="h3" component="h3"  sx={TextStyle} >      
