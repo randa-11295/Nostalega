@@ -8,8 +8,10 @@ import ArrowButton from "../../comman/ArrowButton"
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useState } from "react";
 
 const MovieSlideShow = () =>{
+
 
 const arr= [1,2,3,4,5,6,7,8]
 
@@ -27,10 +29,10 @@ const clickHandel = (swiper) => {
 return (
 <Box sx={{ height : {xs :"300px" , sm : "350px" , md : "450px" , lg : "550px"}}}>
 
-  <Swiper slidesPerView={1} spaceBetween={30} loop={true}
-          navigation={{ prevEl: navigationPrevRef.current, nextEl: navigationNextRef.current,  }}
-          onInit={clickHandel}  modules={[Navigation , Autoplay ]}  className={classes.swiper}
-          autoplay={{ delay: 2000, disableOnInteraction: false, }} speed ={900}   >
+  <Swiper className={classes.swiper }   
+          navigation={{ prevEl: navigationPrevRef.current, nextEl: navigationNextRef.current, }} loop={true}
+          onInit={clickHandel}  modules={[Navigation , Autoplay ]}  speed ={1500} slidesPerView={1}
+          autoplay={{ delay: 5000, disableOnInteraction: false, }}  >
 
     { arr.map(el=> <SwiperSlide key={el} > <MovieAds /> </SwiperSlide> )  }
 
