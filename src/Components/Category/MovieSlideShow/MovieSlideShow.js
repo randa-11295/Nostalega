@@ -10,43 +10,37 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const MovieSlideShow = () =>{
-   
-  const navigationPrevRef = useRef(null)
-  const navigationNextRef = useRef(null)
+
+const arr= [1,2,3,4,5,6,7,8]
+
+const navigationPrevRef = useRef(null)
+const navigationNextRef = useRef(null)
+
+const clickHandel = (swiper) => {
+    swiper.params.navigation.prevEl = navigationPrevRef.current
+    swiper.params.navigation.nextEl = navigationNextRef.current
+    swiper.navigation.destroy()
+    swiper.navigation.init()
+    swiper.navigation.update()
+}
+
+return (
+<Box sx={{ height : {xs :"300px" , sm : "350px" , md : "450px" , lg : "550px"}}}>
+
+  <Swiper slidesPerView={1} spaceBetween={30} loop={true}
+          navigation={{ prevEl: navigationPrevRef.current, nextEl: navigationNextRef.current,  }}
+          onInit={clickHandel}  modules={[Navigation , Autoplay ]}  className={classes.swiper}
+          autoplay={{ delay: 2000, disableOnInteraction: false, }} speed ={900}   >
+
+    { arr.map(el=> <SwiperSlide key={el} > <MovieAds /> </SwiperSlide> )  }
 
 
-        return (
-            <Box sx={{ height : {xs :"300px" , sm : "350px" , md : "450px" , lg : "550px"}}}>
-            
-              <Swiper
-                slidesPerView={1}
-                spaceBetween={30}
-                loop={true}
-                navigation={{
-                  prevEl: navigationPrevRef.current,
-                  nextEl: navigationNextRef.current,
-                }}
-          
-                modules={[Navigation , Autoplay ]}
-                className={classes.swiper}
-                //  autoplay={{ delay: 2000, disableOnInteraction: false, }} speed ={900} 
-              >
-                <SwiperSlide> <MovieAds /> </SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
-
-                <div className={classes.prev} ref={navigationPrevRef} > <ArrowButton /> </div>
-                <div className={classes.next}  ref={navigationNextRef} > <ArrowButton /> </div>
-              </Swiper>
-            </Box>
-       );
-        }
+    <div className={classes.next} ref={navigationNextRef} > <ArrowButton next={true} /> </div>
+    <div className={classes.prev} ref={navigationPrevRef} > <ArrowButton next={false} /> </div>
+  </Swiper>
+</Box>
+);
+}
 
 
 export default MovieSlideShow
