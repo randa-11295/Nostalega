@@ -1,5 +1,6 @@
 import Image from "next/image"
-import { Box } from "@mui/system"
+import { Box } from "@mui/material"
+import { v4 as uuid } from 'uuid';
 
 const containImage = { 
     height : "100%" ,
@@ -12,7 +13,7 @@ const containImage = {
 const Photo = (props)=>{
     return(
         <Box  sx={containImage}>
-            <Image layout="fill" objectFit='cover'  alt="movie bannar " src={props.src} />
+            <Image layout="fill" objectFit='cover' priority  alt="" src={props.path} />
         </Box>
     )
 }

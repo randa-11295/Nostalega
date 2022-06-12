@@ -1,5 +1,4 @@
 import { Box } from "@mui/material"
-import Image from "next/image"
 import bannar from "../../../public/photos/HomeSlider/bannar.jpg"
 import Typography from '@mui/material/Typography';
 import TypeDetils from "./TypeDetils";
@@ -9,14 +8,13 @@ import IconCustomButton from "../comman/IconCustomButton";
 import DownloadIcon from '@mui/icons-material/Download';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import Photo from "../comman/photo";
-
 import Grid from '@mui/material/Grid';
 
 const containImage = {  width : {xs : '250px'},
-                       height :{ xs : "350px" },
-                      padding : "0" ,
-                      margin :{ xs :"auto"  , md : '0'},
-                      borderRadius : "12px" ,
+                        height :{ xs : "350px" },
+                        padding : "0" ,
+                        margin :{ xs :"auto"  , md : '0'},
+                        borderRadius : "12px" ,
                     } 
 
  const TextStyle ={ margin : {xs: " 35px 0 50px" , md: "0 0 50px"},
@@ -37,7 +35,7 @@ const Detials = ()=>{
    <Grid item xs={12} md={4} lg={3.5} >
 
       <Box sx={containImage}>
-          <Photo src={bannar} />
+          <Photo path={bannar} />
       </Box>
 
   </Grid>

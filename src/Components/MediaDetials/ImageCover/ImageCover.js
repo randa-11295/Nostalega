@@ -5,7 +5,7 @@ import Photo from "../../comman/photo"
 const ImageCover = () => {
 return (
 <section className={classes.box}>
-  <Photo src={bannar} />
+     <Photo path={bannar} />
      <div className={classes.content}>
         <aside className={classes.play}> +  </aside>
      </div>

@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 
 const MovieSlideShow = () =>{
         return (
-            <Box sx={{background : "red" , height : {xs :"300px" , sm : "350px" , md : "450px" , lg : "550px"}}}>
+            <Box sx={{ height : {xs :"300px" , sm : "350px" , md : "450px" , lg : "550px"}}}>
               <Swiper
                 slidesPerView={1}
                 spaceBetween={30}

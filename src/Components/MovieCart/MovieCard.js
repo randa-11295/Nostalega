@@ -47,7 +47,7 @@ const pragStyle ={
 return (
 <Box component="aside" sx={ BoxStyle }>
     <Box  sx={containImage}>
-        <Photo src={photo} />
+        <Photo path={photo} />
     </Box>
 
     <Typography variant="h3" component="h3"  sx={TextStyle} >      
