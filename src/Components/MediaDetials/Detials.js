@@ -8,16 +8,15 @@ import PlayIcon from "../comman/PlayIcon";
 import IconCustomButton from "../comman/IconCustomButton";
 import DownloadIcon from '@mui/icons-material/Download';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+import Photo from "../comman/photo";
 
 import Grid from '@mui/material/Grid';
 
 const containImage = {  width : {xs : '250px'},
                        height :{ xs : "350px" },
-                      overflow : "hidden"  ,
                       padding : "0" ,
                       margin :{ xs :"auto"  , md : '0'},
                       borderRadius : "12px" ,
-                      filter: "grayscale(100%)",
                     } 
 
  const TextStyle ={ margin : {xs: " 35px 0 50px" , md: "0 0 50px"},
@@ -38,7 +37,7 @@ const Detials = ()=>{
    <Grid item xs={12} md={4} lg={3.5} >
 
       <Box sx={containImage}>
-          <Image objectFit="cover" alt="movie bannar " src={bannar} />
+          <Photo src={bannar} />
       </Box>
 
   </Grid>

@@ -1,11 +1,12 @@
 import Box from "@mui/material/Box" 
 import Typography from "@mui/material/Typography" 
-import Image from "next/image"
+// import Image from "next/image"
 import photo from "../../../public/photos/HomeSlider/bannar.jpg"
 import ButtonComponant from "../comman/ButtonComponant"
 import IconCustomButton from "../comman/IconCustomButton"
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import PlayIcon from "../comman/PlayIcon"
+import Photo from "../comman/Photo"
 
 const MovieCard =()=>{
 
@@ -19,13 +20,11 @@ const BoxStyle = {
 }
 
 const containImage = { 
-    outline : '1px solid var(--smoothRed)',
+    outline : '1px solid var(--Grey)',
     height : "200px" ,
     overflow : "hidden"  ,
     margin :"auto"  , 
-    borderRadius : "12px" ,
-    position : "relative",
-    filter: "grayscale(100%)",   
+    borderRadius : "12px" ,  
 } 
 
 
@@ -48,7 +47,7 @@ const pragStyle ={
 return (
 <Box component="aside" sx={ BoxStyle }>
     <Box  sx={containImage}>
-        <Image layout="fill" objectFit='cover'  alt="movie bannar " src={photo} />
+        <Photo src={photo} />
     </Box>
 
     <Typography variant="h3" component="h3"  sx={TextStyle} >      
@@ -61,7 +60,7 @@ return (
 
      <Box>
         <ButtonComponant small={true}>
-              مشاهدة
+            مشاهدة
             <PlayIcon />
         </ButtonComponant>
      

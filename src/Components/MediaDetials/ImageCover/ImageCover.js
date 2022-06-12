@@ -1,14 +1,13 @@
 import classes from "./ImageCover.module.css"
 import bannar from "../../../../public/photos/HomeSlider/suad.jpg"
-import Image from "next/image"
+import Photo from "../../comman/photo"
 
 const ImageCover = () => {
 return (
 <section className={classes.box}>
-  <Image objectFit="cover" alt="movie bannar " src={bannar} />
+  <Photo src={bannar} />
      <div className={classes.content}>
-        
-                    <aside className={classes.play}> +  </aside>
+        <aside className={classes.play}> +  </aside>
      </div>
             
 </section>      

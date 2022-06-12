@@ -15,16 +15,15 @@ const boxStyle = {background : "yellow" ,
 }
 
 const TextStyle ={ margin : {xs: " 35px 0 50px" , md: "0 0 60px"},
-fontFamily: 'Noto Nastaliq Urdu',                 
-fontSize : {xs : '2.2rem' ,  md : "3.3rem"  } ,
+                  fontFamily: 'Noto Nastaliq Urdu',                 
+                  fontSize : {xs : '2.2rem' ,  md : "3.3rem"  } ,
 }
 
-const pragStyle ={
-lineHeight : "  1.8rem",
-fontFamily: 'Noto Naskh Arabic',     
-wordSpacing: '2px',
-margin : { md : "5px 0 20px"}
-}
+const pragStyle ={ lineHeight : "  1.8rem",
+                    fontFamily: 'Noto Naskh Arabic',     
+                    wordSpacing: '2px',
+                    margin : { md : "5px 0 20px"}
+  }
 
 const contentBox = { textAlign:{ xs: 'center' , md : "right"}  , 
                    margin : {xs :"10px" , sm : "10px 45px"  , md : "65px" , lg : "85px"},
@@ -33,9 +32,8 @@ const contentBox = { textAlign:{ xs: 'center' , md : "right"}  ,
 
 const MovieAds =()=>{
 return(
-      <Box sx={boxStyle} > 
-       
-         <Box sx={contentBox}>
+<Box sx={boxStyle} >  
+    <Box sx={contentBox}>
       <Typography variant="h3" component="h3"  sx={TextStyle} >      
             أميرة حبي انا
       </Typography>   
@@ -44,25 +42,19 @@ return(
         موسم واحد - فيلم - 1974
       </Typography> 
 
-     
-        
-       
-
       <Box sx={{margin : "20px 0"  }} >
-        <ButtonComponant >
-            مشاهدة الفيلم
-            <PlayIcon />
-        </ButtonComponant>
+          <ButtonComponant >
+              مشاهدة الفيلم
+              <PlayIcon />
+          </ButtonComponant>
 
-        <IconCustomButton  title="اضافة لقائمتي" >
-            <PlaylistAddIcon />
-        </IconCustomButton>
-        
+          <IconCustomButton  title="اضافة لقائمتي" >
+              <PlaylistAddIcon />
+          </IconCustomButton>    
       </Box>
-
-      </Box>
-      </Box>
-    )
+    </Box>
+</Box>
+)
 }
 
 export default MovieAds
