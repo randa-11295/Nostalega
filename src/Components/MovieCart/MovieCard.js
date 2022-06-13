@@ -29,10 +29,8 @@ const containImage = {
 
 const TextStyle ={ 
     marginTop : '15px' ,
-    fontFamily: 'Noto Naskh Arabic',                                                                                                     
     fontSize : '1.8rem' ,
-    fontWeight : "800" ,
-   
+    fontWeight : "800" ,  
 }
 
 const pragStyle ={
@@ -68,11 +66,6 @@ return (
              <PlaylistAddIcon />
         </IconCustomButton>
      </Box>
-
-
-
-     
-
 </Box>
 )
 }

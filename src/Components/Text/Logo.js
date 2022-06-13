@@ -10,7 +10,7 @@ const TextStyle ={ fontFamily: 'Noto Nastaliq Urdu',
                  }
 
 return (<Typography variant="h6" component="h6"   color="primary"  sx={TextStyle} >      
-            نوستاليجا
+            نوستالجيا
         </Typography>
 
 )}

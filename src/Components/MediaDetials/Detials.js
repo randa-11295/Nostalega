@@ -22,7 +22,6 @@ const containImage = {  width : {xs : '250px'},
 
 const pragStyle ={
       lineHeight : "  1.8rem",
-      fontFamily: 'Noto Naskh Arabic',     
       wordSpacing: '2px',
       margin : { md : "5px 0 20px"}
 }
@@ -43,7 +42,7 @@ const Detials = ()=>{
     
       <Headline text="اميرة حبي انا" />
 
-      <Typography variant="b" component="b"  sx={{fontFamily: 'Noto Naskh Arabic',}}    >      
+      <Typography variant="b" component="b"    >      
         موسم واحد - فيلم - 1974
       </Typography> 
 

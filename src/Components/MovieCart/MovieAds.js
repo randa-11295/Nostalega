@@ -42,7 +42,7 @@ return(
       <Headline text="أميرة حبي انا" />
       
 
-      <Typography variant="b" component="b"  sx={{fontFamily: 'Noto Naskh Arabic',}}    >      
+      <Typography variant="b" component="b"   >      
         موسم واحد - فيلم - 1974
       </Typography> 
 
