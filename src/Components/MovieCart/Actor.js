@@ -6,11 +6,11 @@ import Typography from "@mui/material/Typography"
 const Actor =() =>{
   return (
 <Box sx={{width : "130px"  , margin : "15px"}}>
-    <Box sx = {{width : "80px" , height : "80px" ,   overflow : "hidden" ,   borderRadius : "50%" , textAlign : "center" , margin : 'auto'}} >
+    <Box sx = {{width : "80px" , height : "80px" ,   overflow : "hidden" ,   borderRadius : "50%" , margin : 'auto'}} >
         <Photo  title="hend"  path={pathImg}/>
     </Box>
   
-    <Typography variant="h5" component="h3"  sx={{ margin : "10px 0 5px" , fontWeight : '800' , fontSize : "1.6rem" ,  textAlign : "center"}} >      
+    <Typography variant="h5" component="h3"  sx={{ margin : "10px 0 5px" , fontWeight : '800' , fontSize : "1.6rem" ,  }} >      
         هند رستم  
     </Typography> 
 

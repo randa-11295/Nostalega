@@ -28,7 +28,7 @@ const pragStyle ={
 
 const Detials = ()=>{
     return (
-<Grid container  sx= {{padding : {xs : "80px 0" ,  md : "120px 0"}}} >
+<Grid container  sx= {{padding : {xs : "80px 0" ,  md : "120px 0 110px"}}} >
    <Grid item xs={12} md={4} lg={3.5} sx={ flexStyle() }  >
 
       <Box sx={containImage}>
