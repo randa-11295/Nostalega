@@ -43,7 +43,7 @@ window.removeEventListener('scroll', changeNavbarColor);
 })
 
 return (
-<AppBar component="nav" sx={{ background :colorChange ,  boxShadow : "none" , transition : ".3s"  ,}}>
+<AppBar component="nav" sx={{ background :colorChange ,  boxShadow : "none" , transition : ".3s"  , display : {xs : "none" , md : "block"}}}>
 <ContainerBox>
 <Toolbar sx={{ ...flexStyle('space-between') ,  padding :"0px !important" , }}  >
   

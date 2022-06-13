@@ -6,17 +6,13 @@ import PlayIcon from "../comman/PlayIcon";
 import IconCustomButton from "../comman/IconCustomButton";
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import Photo from "../comman/Photo";
+import Headline from "../Text/HeadLine";
 
 
 const boxStyle = {height : "100%" , 
                  justifyContent :{xs: "center" , md : "flex-start" },
                  display : "flex",
                  alignItems: {xs: "center"  , lg : "flex-end"},
-}
-
-const TextStyle ={ margin : {xs: " 35px 0 50px" , md: "0 0 60px"},
-                  fontFamily: 'Noto Nastaliq Urdu',                 
-                  fontSize : {xs : '2.2rem' ,  md : "3.3rem"  } ,
 }
 
 const pragStyle ={ lineHeight : "  1.8rem",
@@ -42,9 +38,9 @@ return(
         <Photo title="bannar" path={img} />
     </Box>
     <Box sx={contentBox}>
-      <Typography variant="h3" component="h3"  sx={TextStyle} >      
-            أميرة حبي انا
-      </Typography>   
+
+      <Headline text="أميرة حبي انا" />
+      
 
       <Typography variant="b" component="b"  sx={{fontFamily: 'Noto Naskh Arabic',}}    >      
         موسم واحد - فيلم - 1974

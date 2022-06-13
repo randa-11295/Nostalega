@@ -2,9 +2,8 @@ import { Box } from "@mui/material"
 import ImageCover from "./ImageCover/ImageCover"
 import { useState } from "react"
 
-const vedioStyle ={ 
-                     height :{ xs : '350px' , sm : "400px", md : "500px"  , lg : "550px" },
-                     margin : " auto" ,
+const vedioStyle ={  height :{ xs : '350px' , sm : "400px", md : "500px"  , lg : "550px" },
+                     margin : " 0 auto 60px" ,
                      borderRadius : "15px" ,
                      border : "1px solid white",
                      overflow: 'hidden',
@@ -21,13 +20,13 @@ const [runVideo , setRunVideo]  = useState(true)
 return(
 <Box sx={vedioStyle} >
 { runVideo ?  <ImageCover />  : <iframe width="100%"
-                                 height="100%" 
-                                 src="https://www.youtube.com/embed/pigh5IgA7qQ" 
-                                 title="YouTube video player"
-                                 frameborder="0"
-                                 allowfullscreen="allowfullscreen"
-                                 allow="accelerometer; autoplay;  encrypted-media;  picture-in-picture"
-/>  }
+                                    height="100%" 
+                                    src="https://www.youtube.com/embed/pigh5IgA7qQ" 
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allowfullscreen="allowfullscreen"
+                                    allow="accelerometer; autoplay;  encrypted-media;  picture-in-picture"
+ />}
 
 </Box>
 )}

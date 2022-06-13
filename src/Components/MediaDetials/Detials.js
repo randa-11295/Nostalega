@@ -9,18 +9,16 @@ import DownloadIcon from '@mui/icons-material/Download';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import Photo from "../comman/photo";
 import Grid from '@mui/material/Grid';
+import Headline from "../Text/HeadLine";
+import {flexStyle} from "../../General/genralStyle"
 
 const containImage = {  width : {xs : '250px'},
                         height :{ xs : "350px" },
                         padding : "0" ,
                         margin :{ xs :"auto"  , md : '0'},
-                        borderRadius : "12px" ,
+                        borderRadius : "15px" ,
+                        overflow : 'hidden'
                     } 
-
- const TextStyle ={ margin : {xs: " 35px 0 50px" , md: "0 0 50px"},
-                    fontFamily: 'Noto Nastaliq Urdu',                 
-                    fontSize : {xs : '2.2rem' ,  md : "2.5rem"  } ,
-                  }
 
 const pragStyle ={
       lineHeight : "  1.8rem",
@@ -32,7 +30,7 @@ const pragStyle ={
 const Detials = ()=>{
     return (
 <Grid container  sx= {{padding : {xs : "80px 0" ,  md : "120px 0"}}} >
-   <Grid item xs={12} md={4} lg={3.5} >
+   <Grid item xs={12} md={4} lg={3.5} sx={ flexStyle() }  >
 
       <Box sx={containImage}>
           <Photo path={bannar} />
@@ -42,9 +40,8 @@ const Detials = ()=>{
      <Grid item xs={12} md={8} lg={8.5} >
 
       <Box sx={{ textAlign:{ xs: 'center' , md : "right"}  , padding : {xs : "0 20px"} }}>
-      <Typography variant="h3" component="h3"  sx={TextStyle} >      
-            أميرة حبي انا
-      </Typography>   
+    
+      <Headline text="اميرة حبي انا" />
 
       <Typography variant="b" component="b"  sx={{fontFamily: 'Noto Naskh Arabic',}}    >      
         موسم واحد - فيلم - 1974
