@@ -16,7 +16,7 @@ const listStyle = { width:  250 ,
                     padding : '30px 5px' ,
                     minHeight : "100%"}
 
-export default function SwipeableTemporaryDrawer(props) {
+export default function SideNavbar(props) {
 return (
 <SwipeableDrawer  anchor={'right'}  open={props.right}
                                     onClose={()=>{ props.toggleDrawer( false) }} 

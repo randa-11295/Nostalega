@@ -3,12 +3,12 @@
     background-color: rgba(0, 0, 0, 0);
     color: var(--creemy);
     border-radius: 15px;
-    padding: 4px 15px 4px 40px;
+    padding: 2px 15px 2px 40px;
     border: 2px solid var(--creemy);
     transition: .3s;
     background-image: url('../../../../public/photos/Input/searchIcon.png') ;
     background-repeat: no-repeat;
-    background-size: 15px ;
+    background-size: 12px ;
     background-position: 10px center;
 
 }

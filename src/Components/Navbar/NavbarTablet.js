@@ -48,7 +48,7 @@ return (
 <Toolbar sx={{ ...flexStyle('space-between') ,  padding :"0px !important" , }}  >
   
 <Logo />
-<Box sx={{width : '35%'}}>
+<Box sx={{width : '40%'}}>
 <SearchInputTablet />
 </Box>
  <Box>
@@ -57,9 +57,9 @@ return (
                   {el}
               </Button>})
   }
- </Box>
-
+  
  <UserMenu />
+ </Box>
  
 
 </Toolbar>
