@@ -16,7 +16,10 @@
 
   }
 
- 
+ .box{position: relative;
+  height: 100%;
+}
+
  .next ,  .prev {
     transform: translate(0 , -50%);
     top: 50%;
@@ -25,13 +28,23 @@
     z-index: 5000;
     margin: 0 35px;
     border-radius: 50%;
-    background-color: var(--smoothRed);
+    /* background-color: var(--smoothRed); */
   }
 
   .next {
     right: 0%; 
   }
-
+  
   .prev {
     left: 0%;
+  }
+
+  @media (min-width : 789px) {
+    .moveRight {
+      right: -85px ; 
+    }  
+    .moveLeft {
+      left: -85px ; 
+    }  
+    
   }

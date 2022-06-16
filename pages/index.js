@@ -1,6 +1,7 @@
-
- import HomeHeader from "../src/Components/Home/HomeHeader"
+import HomeHeader from "../src/Components/Home/HomeHeader"
 import Head from 'next/head'
+import CardSlideShow from "../src/Components/comman/CardSlideShow"
+import ContainerBox from "../src/Components/HOC/ContainerBox"
 const Home =()=>{
     return (
         <>
@@ -9,7 +10,13 @@ const Home =()=>{
           </Head>
        
         <HomeHeader />
-        <p>راندا محمد</p>
+         
+         <ContainerBox>
+            <CardSlideShow />
+            <CardSlideShow />
+            <CardSlideShow />
+            <CardSlideShow />
+         </ContainerBox>
         </>
     )
 }

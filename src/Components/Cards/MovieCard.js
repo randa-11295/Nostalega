@@ -15,7 +15,8 @@ const BoxStyle = {
     borderRadius : "12px",
     color : "black" ,
     padding : "20px" ,
-    margin : "auto"
+    margin : "auto" ,
+    textAlign : "right"
 }
 
 const containImage = { 
@@ -41,6 +42,7 @@ const pragStyle ={
     color : "var(--Grey)"
    
 }
+
 return (
 <Box component="aside" sx={ BoxStyle }>
     <Box  sx={containImage}>
