@@ -4,14 +4,11 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 
 
- const iconStyle = {
-    fontSize : {xs: "1.7rem" , md : "2rem"  , lg : "2.2rem"}
- }
 
 export default function ArrowButton(props) {
 return (
-<IconButton color={(props.parts? 'primary' : "secondary")} aria-label="arrow" component="button" >
-  { props.next ? <ArrowForwardIosIcon sx={iconStyle}  />  : <ArrowBackIosNewIcon sx={iconStyle} /> }
+<IconButton color="secondary" aria-label="arrow" component="button" >
+  { props.next ? <ArrowForwardIosIcon  />  : <ArrowBackIosNewIcon  /> }
 </IconButton>
  );
 }

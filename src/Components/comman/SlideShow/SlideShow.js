@@ -6,21 +6,20 @@ import ArrowButton from "../ArrowButton"
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { FamilyRestroomRounded } from "@mui/icons-material";
 
 
 const SlideShow = (props) =>{
 
  const responsive= { 768: {
       slidesPerView: 2,
-      spaceBetween: 0,
+      spaceBetween: 5,
     },
-    768: {
+    900: {
       slidesPerView: 3,
-      spaceBetween: 0,
     },
     1024: {
       slidesPerView: 4,
-      spaceBetween: 0,
     }
 
   }
@@ -43,20 +42,20 @@ return (
 
   <Swiper className={classes.swiper }   
           navigation={{ prevEl: navigationPrevRef.current, nextEl: navigationNextRef.current, }}
-          loop={true}
+          loop={(props.parts ? false : true)}
           pagination={{   clickable:  true, }}
           breakpoints={ (props.parts ? responsive : {}) }
           slidesPerView="auto"
           modules={[ Navigation, Autoplay]}
           onInit={clickHandel}  
           speed ={1500}
-          autoplay={{ delay: 5000, disableOnInteraction: false, }}  >
+          autoplay={ (props.parts ?  {} :  { delay: 5000, disableOnInteraction: false, })}  >
 
       {props.children} 
 
 
-    <div className={classes.next} ref={navigationNextRef} > <ArrowButton parts={props.parts} next={true} /> </div>
-    <div className={classes.prev} ref={navigationPrevRef} > <ArrowButton parts={props.parts} next={false} /> </div>
+    <div className={classes.next} ref={navigationNextRef} > <ArrowButton next={true} /> </div>
+    <div className={classes.prev} ref={navigationPrevRef} > <ArrowButton next={false} /> </div>
   </Swiper>
 );
 }

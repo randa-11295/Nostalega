@@ -23,7 +23,9 @@
     z-index: 500;
     position: absolute;
     z-index: 5000;
-    margin: 0 20px;
+    margin: 0 35px;
+    border-radius: 50%;
+    background-color: var(--smoothRed);
   }
 
   .next {
