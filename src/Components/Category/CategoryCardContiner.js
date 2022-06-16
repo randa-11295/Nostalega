@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
-import MovieCard from '../movieCart/MovieCard';
+import MovieCard from '../Cards/MovieCard';
 
 const arr = [1,2,3,4,5,6,7,8,9,10,11,12]
 

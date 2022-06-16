@@ -19,12 +19,12 @@ const [runVideo , setRunVideo]  = useState(true)
 
 return(
 <Box sx={vedioStyle} >
-{ runVideo ?  <ImageCover />  : <iframe width="100%"
+{ !runVideo ?  <ImageCover />  : <iframe width="100%"
                                     height="100%" 
                                     src="https://www.youtube.com/embed/pigh5IgA7qQ" 
                                     title="YouTube video player"
-                                    frameborder="0"
-                                    allowfullscreen="allowfullscreen"
+                                    frameBorder="0"
+                                    allowFullScreen="allowfullscreen"
                                     allow="accelerometer; autoplay;  encrypted-media;  picture-in-picture"
  />}
 

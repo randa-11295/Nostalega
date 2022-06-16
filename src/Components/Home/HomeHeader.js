@@ -1,4 +1,4 @@
-import SlideShow from "./SlideShow/SlideShow";
+import FadeSlideShow from "./FadeSlideShow/FadeSlideShow";
 import Box from '@mui/material/Box';
 import { flexStyle } from "../../General/genralStyle";
 import  classes from "./HomeHeader.module.css"
@@ -18,7 +18,7 @@ const HomeHeader =()=>{
 
             <Box sx={{ width : { xs : "100%" , md :"60%"} , 
                        height : { xs : "60%" , md :"100%"}  }} >
-                <SlideShow />
+                <FadeSlideShow />
            
             </Box>
             <div className={classes.gradientPart}  />
