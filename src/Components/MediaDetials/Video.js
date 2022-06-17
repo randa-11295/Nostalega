@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
 import ImageCover from "./ImageCover/ImageCover"
-import { useState  , useRef , useEffect} from "react"
+import { useState  } from "react"
 
 const vedioStyle ={  height :{ xs : '350px' , sm : "400px", md : "500px"  , lg : "600px" },
                      margin : " 0 auto 60px" ,
@@ -17,18 +17,11 @@ const vedioStyle ={  height :{ xs : '350px' , sm : "400px", md : "500px"  , lg :
 const Video =() =>{
 const [runVideo , setRunVideo]  = useState(true)
 
-useEffect(()=>{
-   console.log(media)
-   media.current?.focus()
-},[runVideo])
-
-const media = useRef(null)
 
 const  changeVideo =()=>{
+   
 const isVideo = !runVideo 
 setRunVideo(isVideo)  
-console.log(media)
-// media.current.play()
 
 }
 
