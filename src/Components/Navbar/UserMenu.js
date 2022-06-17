@@ -14,7 +14,8 @@ export default function UserMenu() {
   const open = Boolean(anchorEl);
   
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    // setAnchorEl(event.currentTarget);
+    console.log("not support yet")
   };
   const handleClose = () => {
     setAnchorEl(null);

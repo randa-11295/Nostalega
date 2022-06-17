@@ -16,8 +16,9 @@ const boxStyle = { height : "100vh",
 const textStyle ={
     margin : {xs : "auto" ,md : "60px 0 0" , lg : "80px 0 0"},
     lineHeight : "2rem" , 
+    wordSpacing: "2px" ,
     width :{xs : "90%" , sm : "100%" , md : "55%" , lg : "48%"},
-    fontSize : {xs : '.9rem' , sm : "1rem"}
+    fontSize : {xs : '.9rem' , sm : "1rem" , xl : "1.1rem"}
 }
 const HomeHeader =()=>{
 return(
