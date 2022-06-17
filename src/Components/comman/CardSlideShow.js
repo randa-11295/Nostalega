@@ -1,4 +1,4 @@
-import SlideShow from "./SlideShow/SlideShow"
+import SlideShow from "../HOC/SlideShow/SlideShow"
 import {  SwiperSlide } from "swiper/react";
 import { v4 as uuidv4 } from 'uuid';
 import MovieCard from "../Cards/MovieCard";

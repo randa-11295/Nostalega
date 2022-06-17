@@ -5,12 +5,12 @@ export default function MainTitle(props) {
 
 const TextStyle ={ 
   fontFamily: 'Noto Nastaliq Urdu', 
-                    textAlign : "center" ,  
-                    fontSize : {sm : '8rem' , md : '10rem'  , xl : "11rem" } ,
+                     margin : { xs : "90px 10px 50px" , md : "0" },
+                    fontSize : {xs : '5rem' , md : '6.8rem'  , xl : "7.5rem" } ,
                   }
 
 return (<Typography variant="h1" component="h1"  sx={TextStyle} >      
-             نوستاليجا
+             نوستالجيا
         </Typography>
         
 

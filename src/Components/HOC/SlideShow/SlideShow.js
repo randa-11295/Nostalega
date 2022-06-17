@@ -2,7 +2,7 @@ import { Swiper } from "swiper/react";
 import { useRef  } from "react";
 import { Navigation, Autoplay} from "swiper";
 import classes from "./SlideShow.module.css";
-import ArrowButton from "../ArrowButton"
+import ArrowButton from "../../comman/ArrowButton"
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";

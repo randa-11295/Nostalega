@@ -3,10 +3,7 @@ import Container from '@mui/material/Container';
 
 export default function ContainerBox(props) {
 
-const boxStyle = {maxWidth : { xs : "xs" , sm : "sm" , md : "md" , lg : "lg" } ,
-
-                   
-}
+const boxStyle = {maxWidth : { xs : "xs" , sm : "sm" , md : "md" , lg : "lg" } ,}
 
 return (
     <Container sx={boxStyle}>

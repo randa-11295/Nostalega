@@ -11,7 +11,7 @@ const media =() =>{
             <ActorTeam />
             <Video />
 
-          <CardSlideShow />
+            <CardSlideShow />
           </ContainerBox >
     )
 }
