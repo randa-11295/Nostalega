@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography';
 
 const boxStyle = { height : "100vh",
             position: "relative",
-            background : "green",             
             textAlign :{ xs :"center" , md : "right"}, 
             flexDirection: {xs : 'column' , md : "row", },
             ...flexStyle("flex-end")}

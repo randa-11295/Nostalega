@@ -29,9 +29,9 @@ const textStyle ={
    </Box> */}
        <Divider  sx={{background : "var(--creemy)"}}/>
 
-       <Typography variant="p" component="p" sx={textStyle}  >      
-       Copy write @ 2022
-      </Typography>
+        <Typography variant="p" component="p" sx={textStyle}  >      
+          Copy write @ 2022
+        </Typography>
 
    
    </ContainerBox>

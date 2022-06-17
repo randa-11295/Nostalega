@@ -6,6 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Logo from '../Text/Logo';
+import useCustomRoute from '../../Hooks/useCustomRoute';
 
 const listStyle = { width:  250 ,
                     direction: 'rtl' ,
@@ -14,6 +15,8 @@ const listStyle = { width:  250 ,
                     direction: 'rtl' ,
                     padding : '30px 5px' ,
                     minHeight : "100%"}
+
+const pages = [ 'افلام',  'اغاني', 'مسلسلات' , 'دخول' ,]
 
 export default function SideNavbar(props) {
 return (
@@ -24,12 +27,14 @@ return (
 <Box sx={listStyle}   onClick={()=>{ props.toggleDrawer( false) }} >
 <Logo />
 <List sx={{padding : " 30px  10% 0"  , }}>
-{[ 'افلام',  'اغاني', 'مسلسلات' , 'دخول' ,].map((text) => (
-        <ListItem sx={{borderTop : "1px solid var(--creemy)"}} key={text} >
-            <ListItemButton>
-                <ListItemText primary={text} sx={{ textAlign : "center"   }}/>
-            </ListItemButton>
-        </ListItem>
+{pages.map((text) => (
+
+<ListItem sx={{borderTop : "1px solid var(--creemy)"}} key={text} >
+    <ListItemButton>
+        <ListItemText primary={text} sx={{ textAlign : "center" } } onClick={()=>{useCustomRoute('category')}}/>
+    </ListItemButton>
+</ListItem>
+
 ))}     
 </List>  
 
