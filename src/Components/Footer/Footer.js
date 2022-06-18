@@ -11,23 +11,39 @@ const textStyle ={
     lineHeight : "2rem" , 
     wordSpacing: "2px" ,
     fontSize :  '.9rem' , 
-    textAlign : "center " ,
-    margin : '10px ' ,
+    margin : '10px auto ' ,
+    width : "50%"
 }
 
-    return (
+const team = [
+{ name : "راندا محمد" , jop : "Front end"  , url : "#"} ,
+{ name : "راندا محمد" , jop : "Front end"  , url : "#"} ,
+{ name : "راندا محمد" , jop : "Front end"  , url : "#"} ,
+{ name : "راندا محمد" , jop : "Front end"  , url : "#"} ,
+]
+return (
 
-<Box >
+<Box sx={{ textAlign : "center " ,}} compnent="footer">
+
     <ContainerBox>
-   {/* <Box>
+       <Divider  sx={{background : "var(--creemy)"}}/>
+
       <Logo />
       <Typography variant="p" component="p" sx={textStyle}  >      
          نوستاليچيا هو اول  موقع متخصص في الافلام والمسلسلات  
          والاغاني القديمة قمنا بتطويره بهدف  اعاده الحياة  لذكريات عشنا معها لحظات سعيدة  
          ومحاولة الحافظ علي تراثينا الثقافي 
       </Typography>
-   </Box> */}
-       <Divider  sx={{background : "var(--creemy)"}}/>
+
+        <Typography variant="h5" component="h5"   >      
+         فريق العمل
+        </Typography>
+           
+        
+
+
+
+
 
         <Typography variant="p" component="p" sx={textStyle}  >      
           Copy write @ 2022

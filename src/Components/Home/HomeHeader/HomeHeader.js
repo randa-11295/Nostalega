@@ -7,6 +7,7 @@ import  ContainerBox from "../../HOC/ContainerBox"
 import Typography from '@mui/material/Typography';
 
 const boxStyle = { height : "100vh",
+            minHeight : "600px" , 
             position: "relative",
             textAlign :{ xs :"center" , md : "right"}, 
             flexDirection: {xs : 'column' , md : "row", },

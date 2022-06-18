@@ -47,7 +47,7 @@ return (
           slidesPerView="auto"
           modules={[ Navigation, Autoplay]}
           onInit={clickHandel}  
-          speed ={1500}
+          speed ={(props.parts ? 750 : 1500)}
           autoplay={ (props.parts ?  false :  { delay: 5000, disableOnInteraction: false, })}  >
 
       {props.children} 
