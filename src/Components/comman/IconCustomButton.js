@@ -23,7 +23,7 @@ const hoverBtn ={
 
 
   return (
-    <Tooltip title={props.title}   placement={props.small?  "left" : "bottom"}>
+    <Tooltip title={props.social ? false : props.title}   placement={props.small?  "left" : "bottom"}>
       <IconButton size={props.small?  "small" : ""}  sx={props.small?  staticBtn : hoverBtn } >
          {props.children}
       </IconButton>

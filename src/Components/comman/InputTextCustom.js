@@ -2,7 +2,7 @@ import TextField from '@mui/material/TextField';
 
 const InputTextCustom = (props)=>{
     return (
-        <TextField fullWidth 
+        <TextField fullWidth  
                     // helperText={props.text }
                     // error={props.vaild  }
                     label={props.label } 
@@ -13,7 +13,7 @@ const InputTextCustom = (props)=>{
                     // value={props.val}
                     // type ={props.type}
 
-                    sx={{fontSize : ".5rem"}}
+                    sx={{fontSize : ".5rem" , mt : .5 , mb : .5 , background : "#fff"}}
 
 /> 
 
