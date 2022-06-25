@@ -1,102 +1,87 @@
 import { useState } from "react";
 import Box from "@mui/material/Box";
-import Switch from "@mui/material/Switch";
-import FormControlLabel from "@mui/material/FormControlLabel";
-// import  bg  from '../assists/bgKatchan.jpg'
 import Rejesteration from "../src/Components/Form/Rejesteration";
+import bg from "../public/photos/HomeSlider/cinma.jpg"
+import MovementEl from "../src/Components/Form/MovmentEl";
 
 export default function Form(props) {
-  //toggel betweenform
-  const [checked, setChecked] = useState(false);
-  const [TopMovementEl, setTopMovementEl] = useState("70%");
-  const [LeftMovementEl, setLeftMovementEl] = useState("70%");
+  const [checked, setChecked] = useState(true);
 
-  const [fristLeft, setfristLeft] = useState("0%");
-  const [secLeft, setSecLeft] = useState("70%");
+  const [left, setLeft] = useState("0%");
+  const [top, setTop] = useState("0%");
 
-  const [fristTop, setfristTop] = useState("0%");
-  const [secTop, setSecTop] = useState("70%");
+  const [leftMoveEl, setLeftMoveEl] = useState("60%");
+  const [topMoveEl, setTopMoveEl] = useState("70%");
 
-  const movementChange = () => {
-    setChecked((prev) => !prev);
+  const movementChangeHandel = () => {
+    const ischecked = !checked;
 
-    if (!checked) {
-      setTopMovementEl("0%");
-      setLeftMovementEl("0%");
+    if (checked) {
+      setTop("30%");
+      setLeft("40%");
 
-      setfristLeft("100%");
-      setSecLeft("30%");
-
-      setfristTop("100%");
-      setSecTop("30%");
+      setLeftMoveEl("0");
+      setTopMoveEl("0");
     } else {
-      setTopMovementEl("70%");
-      setLeftMovementEl("70%");
+      setTop("0%");
+      setLeft("0%");
 
-      setfristLeft("0%");
-      setSecLeft("70%");
-
-      setfristTop("0%");
-      setSecTop("70%");
+      setLeftMoveEl("60%");
+      setTopMoveEl("70%");
     }
-  };
 
+    setChecked(ischecked);
+  };
   const movementElStyle = {
-    background: "red",
+    background: "green",
     width: { xs: "100%", md: "40%" },
-    height: { xs: "40%", md: "100%" },
+    height: { xs: "30%", md: "100%" },
     position: "absolute",
-    top: { xs: TopMovementEl, md: "0%" },
-    left: { xs: "0", md: LeftMovementEl },
+    top: { xs: topMoveEl, md: "0%" },
+    left: { xs: "0", md: leftMoveEl },
     zIndex: "4",
     transition: "1s ease-in-out top , 1s ease-in-out  left ",
-    background: "red",
-    // backgroundImage : `url(${bg})`,
-    backgroundSize: { xs: "auto 100vh", md: "100vw auto" },
+    backgroundImage : `url(${bg.src})`,
+    backgroundSize: {md : "cover"} ,
     backgroundAttachment: "fixed",
-    backgroundPosition: "top center",
-    padding: "100px",
-    opacity: ".5",
+    backgroundPosition: "left ",
+   
+    animationDuration: "1s",
   };
 
   const boxStyle = {
     position: "relative",
     width: "100%",
-    minHeight : "550px",
-    height: "91vh",   
-    mt : 7 , 
+    minHeight: "550px",
+    height: { xs: "91vh", md: "100vh" },
+    mt: { xs: 7, md: 0 },
     overflow: "hidden",
   };
 
   const formPartStyle = {
     transition: "1s ease-in-out all",
-    width: { xs: "100%", md: "70%" },
+    width: { xs: "100%", md: "60%" },
     height: { xs: "70%", md: "100%" },
     position: "absolute",
   };
 
+
+
   return (
     <Box sx={boxStyle}>
-      <Box sx={movementElStyle}>
-        <FormControlLabel
-          control={<Switch checked={checked} onChange={movementChange} />}
-          label="Show"
-        />
+      <Box component="aside" sx={movementElStyle}>
+         <MovementEl movementChangeHandel={movementChangeHandel} checked={checked} />
       </Box>
 
       <Box
         sx={{
-          left: { xs: "0", md: fristLeft },
-          top: { xs: fristTop, md: "0" },
+          left: { xs: "0", md: left },
+          top: { xs: top, md: "0" },
           ...formPartStyle,
         }}
       >
         <Rejesteration />
-     
       </Box>
-
-      
-      
     </Box>
   );
 }

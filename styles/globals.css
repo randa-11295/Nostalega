@@ -2,19 +2,22 @@
   --creemy: #f3f3f3;
   --Grey: #7f7f7f;
   --smoothRed: #d15050;
-  --lightBlack : #151515
+  --lightBlack : #151515;
 }
 
 html,
 body {
-  direction: rtl ;
+  
   font-family:  'Noto Naskh Arabic', Arial, Helvetica, sans-serif;
   background-color: var(--lightBlack);
   color: var(--creemy);
   scroll-behavior: smooth;
- 
+  
+;
 
 }
+
+
 
 a {
   color: inherit;
@@ -24,6 +27,7 @@ a {
 
 * {
   box-sizing: border-box;
+  direction: rtl ;
   padding: 0;
   margin: 0;
   outline: 0;
@@ -37,6 +41,7 @@ a {
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+ 
 }
 
 /* Track */

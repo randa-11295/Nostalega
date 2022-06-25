@@ -1,12 +1,12 @@
-import Button from "@mui/material/Button";
 import Fab from "@mui/material/Fab";
 
 const ButtonCustom = (props) => {
   const styleBtn = {
     marginLeft: "15px",
-    width : "100%" , 
+    width : (props.fullWidth ?"100%" : "auto" ), 
     boxShadow: "none",
     fontWeight: "700",
+    zIndex :1 ,
     fontSize: "1.1rem",
     fontFamily: "Noto Naskh Arabic",
     "&:hover": {
@@ -15,7 +15,8 @@ const ButtonCustom = (props) => {
   };
 
   return (
-    <Fab 
+    <Fab  component="button"
+      onClick={props.clickHandel}
       variant="extended"
       size={props.small ? "small" : ""}
       color="primary"

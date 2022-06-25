@@ -12,8 +12,23 @@ const InputTextCustom = (props)=>{
                     // onChange={props.change}
                     // value={props.val}
                     // type ={props.type}
-
-                    sx={{fontSize : ".5rem" , mt : .5 , mb : .5 , background : "#fff"}}
+                    // InputLabelProps={{
+                    //     style: { color: 'var(--creemy)', }, 
+                    //  }}
+                    sx={{fontSize : ".5rem" , mb :{xs : 1 , md : 3 , color : "var(--creemy)",
+                   
+                      "label": {color: "#f3f3f3a1"} , 
+                      '& .MuiOutlinedInput-root': {
+                        '& fieldset': {
+                          borderColor: '#fff',
+                          borderRadius: "15px" ,
+                          pr : 3 ,
+                        },
+                        
+                    }}
+                   
+                 
+                }}
 
 /> 
 
