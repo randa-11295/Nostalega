@@ -6,7 +6,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Logo from '../Text/Logo';
-import useCustomRoute from '../../Hooks/useCustomRoute';
 
 const listStyle = { width:  250 ,
                     direction: 'rtl' ,

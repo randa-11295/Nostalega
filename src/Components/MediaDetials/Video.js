@@ -34,7 +34,6 @@ return(
                      frameBorder="0"
                      allowFullScreen="allowfullscreen"
                      allow="accelerometer; autoplay;  encrypted-media;  picture-in-picture"
-                     ref={media}
 />}
 
 </Box>

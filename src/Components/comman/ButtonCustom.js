@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 import Fab from '@mui/material/Fab';
 
-const ButtonComponant =(props)=>{
+const ButtonCustom =(props)=>{
 
   const styleBtn ={ marginLeft: "15px" , 
                     boxShadow : "none" ,
@@ -20,4 +20,4 @@ return   (
 
 )}
 
-export default ButtonComponant
+export default ButtonCustom

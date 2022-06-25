@@ -8,10 +8,10 @@ import ContainerBox from '../HOC/ContainerBox'
 const Footer = () =>{
 
 const textStyle ={
-    lineHeight : "2rem" , 
+    lineHeight : "1.5rem" , 
     wordSpacing: "2px" ,
     fontSize :  '.9rem' , 
-    margin : '10px auto ' ,
+    margin : '20px auto 15px' ,
     width : "50%"
 }
 
@@ -26,7 +26,7 @@ return (
 <Box sx={{ textAlign : "center " ,}} compnent="footer">
 
     <ContainerBox>
-       <Divider  sx={{background : "var(--creemy)"}}/>
+       <Divider  sx={{background : "var(--creemy)" , marginBottom : "15px"}}/>
 
       <Logo />
       <Typography variant="p" component="p" sx={textStyle}  >      
