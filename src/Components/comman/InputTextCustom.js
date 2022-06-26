@@ -1,38 +1,47 @@
 import TextField from "@mui/material/TextField";
 
+const styleInput = {
+  mt: 1,
+  color: "var(--creemy) !important",
+  label: { color: "var(--creemy)" },
+  "& input" : {
+   fontsize : ".5rem"
+  } , 
+  "& .MuiOutlinedInput-root": {
+ 
+    "& fieldset": {
+      borderColor: "#fff",
+      borderRadius: "15px",
+    },
+      // '& .MuiInput-input': {
+  //   fontSize: 14,
+  // },
+  },
+};
 const InputTextCustom = (props) => {
+
+  let isError =
+    props.formik.touched[props.name] &&
+    Boolean(props.formik.errors[props.name]);
+
+  let textHelp =
+    (props.formik.touched[props.name] && props.formik.errors[props.name]) ||  " ";
+
   return (
     <TextField
       fullWidth
-      helperText={props.text || " " }
-      // error={true  }
-      label={props.label}
       size="small"
-      // name={props.name}
-      // onBlur = {props.blur}
-      // onChange={props.change}
-      // value={props.val}
-      // type ={props.type}
-      // InputLabelProps={{
-      //     style: { color: 'var(--creemy)', },
-      //  }}
-      sx={{
-        fontSize: ".5rem",
-        m: {
-          mt:.5 ,
-          color: "var(--creemy)",
-
-          label: { color: "#f3f3f3a1" },
-         
-          "& .MuiOutlinedInput-root": {
-            "& fieldset": {
-              borderColor: "#fff",
-              borderRadius: "15px",
-              pr: 3,
-            },
-          },
-        },
-      }}
+      label={props.label}
+      value={props.formik.values[props.name]}
+      onChange={props.formik.handleChange}
+      onBlur={props.formik.handleBlur}
+      error={isError}
+      helperText={textHelp}
+      name={props.name}
+      type={props.pass ? "password" : "text"}
+      // inputProps={{ style: { fontSize: ".6rem" } }}
+      FormHelperTextProps={{ style: { textAlign: "center" } }}
+      sx={styleInput}
     />
   );
 };

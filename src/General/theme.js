@@ -2,8 +2,11 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   direction: "rtl",
+  typography: {
+    "fontFamily":  "Noto Naskh Arabic"
+  } ,
+
   palette: {
-    // smooth red
 
     background: {
       default: "#151515",
@@ -11,6 +14,8 @@ const theme = createTheme({
     text: {
       primary: "#ffffff",
     },
+        // smooth red
+
     primary: {
       main: "#d15050",
       contrastText: "#f3f3f3",
@@ -20,6 +25,12 @@ const theme = createTheme({
       main: "#f3f3f3",
       contrastText: "#000",
     },
+    error : {
+      
+        main: "#d15050",
+        contrastText: "#f3f3f3",
+      
+    }
   },
 });
 

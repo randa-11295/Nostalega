@@ -16,7 +16,7 @@ const ButtonCustom = (props) => {
 
   return (
     <Fab
-      component="button"
+      component="button"  type={props.submit ? "submit" : "button"}
       onClick={props.clickHandel}
       variant="extended"
       size={props.small ? "small" : ""}

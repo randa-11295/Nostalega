@@ -2,25 +2,24 @@ import * as yup from "yup";
 
 const stringVaild = yup
   .string()
-  .matches(/^[a-zA-Z]+$/, "it must be Characters")
-  .min(2, "Too Short!")
-  .max(15, "Too Long!")
-  .required("Required");
+  .required("مطلوب إجباري ")
+  .min(3, "يجب ان تكون الكلمة مكونه من ثلاث احرف او اكثر")
+  .matches(/^[a-zA-Z]+$/, "يجب ان يكون احرف");
 
-const passVaild = yup.string().required("Required").min(8, "Too Short!");
-const passdConfirVaild = yup
+const passVaild = yup
   .string()
-  .required("Required")
-  .oneOf([yup.ref("password")], "Passwords does not match");
+  .required("مطلوب إجباري ")
+  .min(8, "يجب ان تكون الكلمة السر مكونه من 8 احرف او اكثر");
 
-const emailVaild = yup.string().email().required("Required");
+const emailVaild = yup
+  .string()
+  .required("مطلوب إجباري ")
+  .email("يجب ان يكون بريد الكتروني ");
 
-export const signupSchema = yup.object().shape({
-  firstName: stringVaild,
-  lastName: stringVaild,
+export const signUpSchema = yup.object().shape({
+  name: stringVaild,
   email: emailVaild,
   password: passVaild,
-  passwordConfirmation: passdConfirVaild,
 });
 
 export const logInSchema = yup.object().shape({

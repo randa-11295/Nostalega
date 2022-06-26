@@ -6,6 +6,7 @@ import MovementEl from "../src/Components/Form/MovmentEl";
 
 export default function Form(props) {
   const [checked, setChecked] = useState(true);
+  const [log, setLog] = useState(true);
 
   const [left, setLeft] = useState("0%");
   const [top, setTop] = useState("0%");
@@ -13,9 +14,18 @@ export default function Form(props) {
   const [leftMoveEl, setLeftMoveEl] = useState("60%");
   const [topMoveEl, setTopMoveEl] = useState("70%");
 
-  const movementChangeHandel = () => {
-    const ischecked = !checked;
+  const timer =()=>{
+    const toggelLog = !log;
+    setTimeout(()=>{
+      setLog(toggelLog)
+    }, 560)
+  }
 
+  const movementChangeHandel = () => {
+    const toggelchecked = !checked;
+    
+    timer()
+    
     if (checked) {
       setTop("30%");
       setLeft("40%");
@@ -29,9 +39,12 @@ export default function Form(props) {
       setLeftMoveEl("60%");
       setTopMoveEl("70%");
     }
+   
+    setChecked(toggelchecked);
 
-    setChecked(ischecked);
   };
+
+
   const movementElStyle = {
     width: { xs: "100%", md: "40%" },
     height: { xs: "30%", md: "100%" },
@@ -58,7 +71,7 @@ export default function Form(props) {
   };
 
   const formPartStyle = {
-    transition: "1s ease-in-out all",
+    transition: "1s ease-in-out top , 1s ease-in-out  left ",
     width: { xs: "100%", md: "60%" },
     height: { xs: "70%", md: "100%" },
     position: "absolute",
@@ -79,7 +92,7 @@ export default function Form(props) {
           ...formPartStyle,
         }}
       >
-        <Rejesteration />
+        <Rejesteration log={log} />
       </Box>
     </Box>
   );

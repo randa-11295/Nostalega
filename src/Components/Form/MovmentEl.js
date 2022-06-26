@@ -18,7 +18,7 @@ const MovementEl = (props) => {
     textAlign: "center",
     width: "100% !important",
     transition: "1s",
-    left: props.checked ? "-125%" : "0%",
+    left: props.checked ? "-150%" : "0%",
   };
 
   const boxStyle = {
@@ -33,7 +33,7 @@ const MovementEl = (props) => {
   const btnStyle = {
     // width : '40%',
     boxShadow: "none",
-    padding: "10px 30px",
+    padding: "10px 40px",
     fontSize: "1.1rem",
     fontWeight: "800",
     overflow: "hidden",
@@ -65,8 +65,8 @@ const MovementEl = (props) => {
         color="secondary"
         onClick={props.movementChangeHandel}
       >
-        <Box sx={btnSignStyle}>أنشاء حساب</Box>
-        <Box sx={btnLogStyle}>دخول الي حسابك</Box>
+        <Box sx={btnSignStyle}>مستخدم جديد</Box>
+        <Box sx={btnLogStyle}> لديك حساب </Box>
       </Button>
     </Box>
   );
