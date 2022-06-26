@@ -4,8 +4,8 @@ const InputTextCustom = (props) => {
   return (
     <TextField
       fullWidth
-      // helperText={props.text }
-      // error={props.vaild  }
+      helperText={props.text || " " }
+      // error={true  }
       label={props.label}
       size="small"
       // name={props.name}
@@ -18,12 +18,12 @@ const InputTextCustom = (props) => {
       //  }}
       sx={{
         fontSize: ".5rem",
-        mb: {
-          xs: 1,
-          md: 3,
+        m: {
+          mt:.5 ,
           color: "var(--creemy)",
 
           label: { color: "#f3f3f3a1" },
+         
           "& .MuiOutlinedInput-root": {
             "& fieldset": {
               borderColor: "#fff",

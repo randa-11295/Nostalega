@@ -52,7 +52,7 @@ export default function Form(props) {
     position: "relative",
     width: "100%",
     minHeight: "550px",
-    height: { xs: "91vh", md: "100vh" },
+    height: { xs: "92.5vh", md: "100vh" },
     mt: { xs: 7, md: 0 },
     overflow: "hidden",
   };

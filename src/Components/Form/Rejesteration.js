@@ -7,8 +7,8 @@ import { flexStyle } from "../../General/genralStyle";
 
 const BoxStyle = {
   height: { xs: "100%", md: "80%", xl: "75%" },
-  width: { sm: "70%", md: "60%" },
-  padding: { xs: "30px 10% 10px", md: "15px" },
+  width: { xs: "100%", sm: "90%", md: "80%" },
+  padding: { xs: "30px 10% 15px", m: "15px " },
   ...flexStyle("space-evenly"),
   flexDirection: "column",
 };
@@ -18,7 +18,8 @@ const Rejesteration = () => {
     <Box sx={{ height: "100%", ...flexStyle() }}>
       <Box sx={BoxStyle}>
         <HeadLine removeMargin={true} text="تسجيل دخول" />
-        <Box sx={{ mt: 3 }}>
+
+        <Box sx={{ mt: 4, mb: 2 }}>
           <BtnIconNoDesc social={true}>
             <i className="ri-facebook-fill" />
           </BtnIconNoDesc>
@@ -26,12 +27,20 @@ const Rejesteration = () => {
             <i className="ri-google-fill" />
           </BtnIconNoDesc>
         </Box>
-        <Box>
-          <InputTextCustom label="randa" />
-          <InputTextCustom label="randa" />
-          <InputTextCustom label="randa" />
+
+        <Box sx={{ width: "100%" }}>
+          <Box sx={{ width: "75%", margin: "auto" }}>
+            <InputTextCustom label="randa" />
+          </Box>
+          <Box sx={{ width: "90%", margin: "auto" }}>
+            <InputTextCustom label="randa" />
+          </Box>
+          <Box sx={{ width: "75%", margin: "auto" }}>
+            <InputTextCustom label="randa" />
+          </Box>
         </Box>
-        <Box sx={{ width: "65%" }}>
+
+        <Box sx={{ width: "40%" }}>
           <ButtonCustom fullWidth={true}>تسجيل</ButtonCustom>
         </Box>
       </Box>
