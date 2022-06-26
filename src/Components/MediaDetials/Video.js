@@ -27,7 +27,7 @@ setRunVideo(isVideo)
 
 return(
 <Box sx={vedioStyle} >
-{ runVideo ?  <ImageCover changeVideo= {changeVideo} />  : 
+{ runVideo ?  <ImageCover changeVideo={changeVideo} />  : 
               <iframe width="100%"  height="100%" 
                      src="https://www.youtube.com/embed/DX3GVPCaAOw?autoplay=1" 
                      title="YouTube video player"

@@ -9,7 +9,6 @@ export default function BtnIconNoDesc(props) {
   const hoverBtn = {
     color: "secondary.main",
     border: "solid 1px var(--creemy)",
-    marginLeft: "15px",
     transition: ".3s ease-in-out all",
     "&:hover": {
       border: "solid 1px var(--smoothRed)",

@@ -33,7 +33,6 @@ export default function Form(props) {
     setChecked(ischecked);
   };
   const movementElStyle = {
-    background: "green",
     width: { xs: "100%", md: "40%" },
     height: { xs: "30%", md: "100%" },
     position: "absolute",

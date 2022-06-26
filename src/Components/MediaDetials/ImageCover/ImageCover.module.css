@@ -22,18 +22,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--creemy) !important;
     margin: auto;
-    transition: all .3s ease-in-out;
+    transition: all .4s ease-in-out !important;
     cursor: pointer;
     position: relative;
-    background-color: var(--smoothRed) ;
+    background-color: var(--smoothRed) !important ;
 
 }
 
 .play:hover {
-    background: #fff;
-    color:  var(--smoothRed);
+    background: var(--creemy) !important;
+    color:  var(--smoothRed) !important;
     
 }
 

@@ -5,7 +5,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import  SideNavbar from "./SideNavbar"
 import { useState } from 'react';
-import SearchInputTablet from "../comman/searchInputTablet/SearchInputTablet"
+import SearchInputTablet from "../Comman/searchInputTablet/SearchInputTablet"
 
 export default function NavbarMobile() {
 

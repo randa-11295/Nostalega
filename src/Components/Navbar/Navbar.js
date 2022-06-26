@@ -1,17 +1,15 @@
-import NavbarMobile from './NavbarMobile'
-import NavbarTablet from './NavbarTablet'
+import NavbarMobile from "./NavbarMobile";
+import NavbarTablet from "./NavbarTablet";
 
-const Navbar =()=>{
-  
+const Navbar = () => {
+  const routeData = ["افلام", "اغاني", "مسلسلات"];
 
-const routeData = ['افلام',  'اغاني', 'مسلسلات']
+  return (
+    <>
+      <NavbarTablet routeData={routeData} />
+      <NavbarMobile routeData={routeData} />
+    </>
+  );
+};
 
-return (
-<>
-<NavbarTablet routeData={routeData} /> 
-<NavbarMobile routeData={routeData} />
-</>
-)
-}
-
-export default Navbar
+export default Navbar;

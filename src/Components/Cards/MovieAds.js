@@ -1,11 +1,11 @@
 import { Box } from "@mui/system"
 import img from "../../../public/photos/HomeSlider/Zbeda.jpg"
 import Typography from '@mui/material/Typography';
-import ButtonComponant from "../comman/ButtonComponant";
-import PlayIcon from "../comman/PlayIcon";
-import IconCustomButton from "../comman/IconCustomButton";
+import ButtonCustom from "../Comman/ButtonCustom";
+import PlayIcon from "../Comman/PlayIcon";
+import IconCustomButton from "../Comman/IconCustomButton";
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
-import Photo from "../comman/Photo";
+import Photo from "../Comman/Photo";
 import Headline from "../Text/HeadLine";
 
 
@@ -15,15 +15,9 @@ const boxStyle = {height : "100%" ,
                  alignItems: {xs: "center"  , lg : "flex-end"},
 }
 
-const pragStyle ={ lineHeight : "  1.8rem",
-                    fontFamily: 'Noto Naskh Arabic',     
-                    wordSpacing: '2px',
-                    margin : { md : "5px 0 20px"},
-                    position : "relative",
-  }
 
-const contentBox = { textAlign:{ xs: 'center' , md : "right"}  , 
-                      margin : {xs :"10px" , sm : "10px 45px"  , md : " 0 130px" , lg : "0 140px 60px 0"},
+const contentBox = { textAlign:{ xs: 'center' , md : "left"}  , 
+                      margin : {xs :"10px" , sm : "10px 45px"  , md : " 0 130px" , lg : "0 0 70px 140px"},
                       position : "relative",
                       ZIndex : "3" ,
                       width : "250px" }
@@ -47,10 +41,10 @@ return(
       </Typography> 
 
       <Box sx={{margin : "20px 0"  }} >
-          <ButtonComponant >
+          <ButtonCustom >
               مشاهدة الفيلم
               <PlayIcon />
-          </ButtonComponant>
+          </ButtonCustom>
 
           <IconCustomButton  title="اضافة لقائمتي" >
               <PlaylistAddIcon />

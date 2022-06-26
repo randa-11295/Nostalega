@@ -8,7 +8,7 @@ import UserMenu from "./UserMenu";
 import { v4 as uuid } from "uuid";
 import Logo from "../Text/Logo";
 import ContainerBox from "../HOC/ContainerBox";
-import SearchInputTablet from "../comman/searchInputTablet/SearchInputTablet";
+import SearchInputTablet from "../Comman/searchInputTablet/SearchInputTablet";
 
 const buttonStyle = {
   fontSize: { sm: ".9rem", md: "1rem" },

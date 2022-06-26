@@ -2,7 +2,7 @@ import ContainerBox from "../src/Components/HOC/ContainerBox";
 import Video from "../src/Components/MediaDetials/Video";
 import Detials from "../src/Components/MediaDetials/Detials";
 import ActorTeam from "../src/Components/MediaDetials/ActorsTeam";
-import CardSlideShow from "../src/Components/comman/CardSlideShow";
+import CardSlideShow from "../src/Components/Comman/CardSlideShow";
 
 const media = () => {
   return (
