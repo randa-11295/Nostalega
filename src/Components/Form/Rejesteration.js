@@ -7,17 +7,17 @@ import { flexStyle } from "../../General/genralStyle";
 import Typography from "@mui/material/Typography";
 import { useFormik } from "formik";
 import {logInSchema , signUpSchema} from "../../General/vaildationShema"
+import CheckArea from "../Comman/CheckArea"
 
 const BoxStyle = {
-  height: { xs: "100%", md: "80%", xl: "75%" },
-  width: { xs: "100%", sm: "90%", md: "80%" },
+  height: { xs: "95%", md: "80%", xl: "75%" },
+  width: { xs: "100%", sm: "90%", md: "80%", lg : "55%" },
   padding: { xs: "30px 10% ", md: "15px " },
   ...flexStyle("space-evenly"),
   flexDirection: "column",
 };
 
 const textStyle = {
-  margin: "auto !important",
   cursor: "pointer",
   display: "inline-block",
   borderBottom: "1px solid var(--creemy)",
@@ -42,7 +42,7 @@ const sign = {
 const Rejesteration = (props) => {
   const formik = useFormik({
     initialValues: (props.log ? login : sign),
-    // validationSchema: (props.log ? logInSchema : signUpSchema),
+    validationSchema: (props.log ? logInSchema : signUpSchema),
     onSubmit: (values) => {
       console.log("submit ", values);
       console.log("submit ", props.log );
@@ -66,29 +66,31 @@ const Rejesteration = (props) => {
           </BtnIconNoDesc>
         </Box>
 
-        <Box sx={{ width: "100%", textAlign: "center" }}>
+        <Box sx={{ width: "100%", textAlign: "center" , mb: 2 }}>
           {!props.log ? (
-            <Box sx={{ width: "75%", margin: "auto" }}>
               <InputTextCustom formik={formik} name="name" label="الاسم" />
-            </Box>
           ) : null}
-          <Box sx={{ width: "90%", margin: "auto" }}>
             <InputTextCustom formik={formik} name="email" label="البريد الاليكتروني" />
-          </Box>
-          <Box sx={{ width: "75%", margin: "auto" }}>
             <InputTextCustom formik={formik} name="password" pass={true} label="الرقم السري" />
-          </Box>
 
           {props.log ? (
+          <Box sx={{...flexStyle('space-evenly'),  width : "100%" }}>
+
+           <CheckArea />
             <Typography variant="p" component="p" sx={textStyle}>
               هل نسيت كلمة السر ؟
             </Typography>
+          
+          
+
+          </Box>
+          
+       
+
           ) : null}
         </Box>
 
-        <Box sx={{ width: "40%", mt: 1 }}>
           <ButtonCustom  submit={true} fullWidth={true}>تسجيل</ButtonCustom>
-        </Box>
       </Box>
     </Box>
   );
