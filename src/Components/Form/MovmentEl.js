@@ -10,7 +10,7 @@ const MovementEl = (props) => {
     width: "100% !important",
     textAlign: "center",
     transition: "1s",
-    left: props.checked ? "0" : "115%",
+    left: props.checked ? "0" : "110%",
   };
 
   const btnLogStyle = {
@@ -18,7 +18,7 @@ const MovementEl = (props) => {
     textAlign: "center",
     width: "100% !important",
     transition: "1s",
-    left: props.checked ? "-150%" : "0%",
+    left: props.checked ? "-110%" : "0%",
   };
 
   const boxStyle = {
@@ -31,10 +31,10 @@ const MovementEl = (props) => {
   };
 
   const btnStyle = {
-    // width : '40%',
+    width : '160px',
     boxShadow: "none",
-    padding: "10px 40px",
-    fontSize: "1.1rem",
+    padding: "12px 0",
+    fontSize: "1.2rem",
     fontWeight: "800",
     overflow: "hidden",
     borderRadius: "30px ",
@@ -49,12 +49,13 @@ const MovementEl = (props) => {
   return (
     <Box sx={boxStyle}>
       <Box sx={{ display :{md: "none"} , mb: 2 }}>
-        <HeadLine removeMargin={true} text=" اهلا في نوستاليجا" />
+        <HeadLine removeMargin={true} text="يومك سعيد" />
       </Box>
+
       <Box  sx={{ display :{xs : "none" , md: "flex" ,   
       flexDirection : "column" , height : "370px" ,textAlign :"center" , justifyContent : "space-around" } }}>
-        <HeadLine removeMargin={true} text=" اهلا في " />
-        <MainTitle />
+        <HeadLine removeMargin={true} text="يومك" />
+        <MainTitle text="سعيد" />
       </Box>
       
 

@@ -37,7 +37,7 @@ const HomeHeader = () => {
 
       <Box className={classes.gradientPart} component="main">
         <ContainerBox>
-          <MainTitle />
+          <MainTitle text="نوستالجيا" main={true} />
 
           <Typography variant="p" component="p" sx={textStyle}>
             هل تساءلت يوماً عن سر ذلك الحنين، وذلك الشعور الذي يطاردك عندما تزور

@@ -8,8 +8,8 @@ export default function MainTitle(props) {
   };
 
   return (
-    <Typography variant="h1" component="h1" sx={textStyle}>
-      نوستالجيا
+    <Typography variant={props.main ? "h1" : "h2" } component={props.main ? "h1" : "h2"} sx={textStyle}>
+      {props.text}
     </Typography>
   );
 }

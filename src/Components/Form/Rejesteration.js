@@ -1,17 +1,17 @@
-import { Box } from "@mui/material";
 import HeadLine from "../Text/HeadLine";
 import ButtonCustom from "../Comman/ButtonCustom";
 import InputTextCustom from "../Comman/InputTextCustom";
 import BtnIconNoDesc from "../Comman/BtnIconNoDesc";
-import { flexStyle } from "../../General/genralStyle";
 import Typography from "@mui/material/Typography";
-import { useFormik } from "formik";
-import {logInSchema , signUpSchema} from "../../General/vaildationShema"
-import CheckArea from "../Comman/CheckArea"
+import CheckArea from "../Comman/CheckArea";
+import formikCustom from "../../General/formikCustom";
+import { logInSchema, signUpSchema } from "../../General/vaildationShema";
+import { Box } from "@mui/material";
+import { flexStyle } from "../../General/genralStyle";
 
 const BoxStyle = {
   height: { xs: "95%", md: "80%", xl: "75%" },
-  width: { xs: "100%", sm: "90%", md: "80%", lg : "55%" },
+  width: { xs: "100%", sm: "90%", md: "80%", lg: "55%" },
   padding: { xs: "30px 10% ", md: "15px " },
   ...flexStyle("space-evenly"),
   flexDirection: "column",
@@ -34,25 +34,21 @@ const login = {
   password: "",
 };
 const sign = {
-  name : "" ,
+  name: "",
   email: "",
   password: "",
 };
 
 const Rejesteration = (props) => {
-  const formik = useFormik({
-    initialValues: (props.log ? login : sign),
-    validationSchema: (props.log ? logInSchema : signUpSchema),
-    onSubmit: (values) => {
-      console.log("submit ", values);
-      console.log("submit ", props.log );
-      formik.resetForm();
-    },
-  });
+  const formikLog = formikCustom(login, logInSchema);
+  const formikSign = formikCustom(sign, signUpSchema);
+
+  let formik = props.log ? formikLog : formikSign;
+
   return (
     <Box sx={{ height: "100%", ...flexStyle() }}>
       <Box sx={BoxStyle} component="form" onSubmit={formik.handleSubmit}>
-        <HeadLine
+        <HeadLine red
           removeMargin={true}
           text={props.log ? "تسجيل دخول" : "أنشاء حساب"}
         />
@@ -66,31 +62,35 @@ const Rejesteration = (props) => {
           </BtnIconNoDesc>
         </Box>
 
-        <Box sx={{ width: "100%", textAlign: "center" , mb: 2 }}>
+        <Box sx={{ width: "100%", textAlign: "center", mb: 2 }}>
           {!props.log ? (
-              <InputTextCustom formik={formik} name="name" label="الاسم" />
+            <InputTextCustom formik={formik} name="name" label="الاسم" />
           ) : null}
-            <InputTextCustom formik={formik} name="email" label="البريد الاليكتروني" />
-            <InputTextCustom formik={formik} name="password" pass={true} label="الرقم السري" />
+          <InputTextCustom
+            formik={formik}
+            name="email"
+            label="البريد الالكتروني"
+          />
+          <InputTextCustom
+            formik={formik}
+            name="password"
+            pass={true}
+            label="الرقم السري"
+          />
 
           {props.log ? (
-          <Box sx={{...flexStyle('space-evenly'),  width : "100%" }}>
-
-           <CheckArea />
-            <Typography variant="p" component="p" sx={textStyle}>
-              هل نسيت كلمة السر ؟
-            </Typography>
-          
-          
-
-          </Box>
-          
-       
-
+            <Box sx={{ ...flexStyle("space-evenly"), width: "100%" }}>
+              <CheckArea />
+              <Typography variant="p" component="p" sx={textStyle}>
+                هل نسيت كلمة السر ؟
+              </Typography>
+            </Box>
           ) : null}
         </Box>
 
-          <ButtonCustom  submit={true} fullWidth={true}>تسجيل</ButtonCustom>
+        <ButtonCustom submit={true} fullWidth={true}>
+          تسجيل
+        </ButtonCustom>
       </Box>
     </Box>
   );

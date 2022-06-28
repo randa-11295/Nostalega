@@ -15,19 +15,13 @@ const styleInput = {
       borderRadius: "15px",
       
     },
-    // '& .MuiInput-input': {
-    //   fontSize: 14,
-    // },
+   
   },
 };
 const InputTextCustom = (props) => {
-  let isError =
-    props.formik.touched[props.name] &&
-    Boolean(props.formik.errors[props.name]);
+  let isError =  props.formik.touched[props.name] &&  Boolean(props.formik.errors[props.name]);
 
-  let textHelp =
-    (props.formik.touched[props.name] && props.formik.errors[props.name]) ||
-    " ";
+  let textHelp =   (props.formik.touched[props.name] && props.formik.errors[props.name]) ||" ";
 
   return (
     <TextField
