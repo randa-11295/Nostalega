@@ -3,6 +3,40 @@ import Button from "@mui/material/Button";
 import MainTitle from "../Text/MainTitle";
 import HeadLine from "../Text/HeadLine";
 import { flexStyle } from "../../General/genralStyle";
+import Typography from "@mui/material/Typography";
+
+const textStyle = {
+  fontFamily: "Noto Nastaliq Urdu",
+  fontSize: { md: "10rem", lg: "12rem" },
+  padding: "0",
+  lineHeight: "9rem",
+};
+
+const boxStyle = {
+  textAlighn: "center",
+  background: "rgba(0, 0, 0, 0.81)",
+  margin: "auto",
+  flexDirection: "column",
+  ...flexStyle("space-around"),
+  height: { xs: "100%" },
+  padding: { md: "40px 0" },
+};
+
+const btnStyle = {
+  width: "160px",
+  boxShadow: "none",
+  padding: "12px 0",
+  fontSize: "1.2rem",
+  fontWeight: "800",
+  overflow: "hidden",
+  borderRadius: "30px ",
+  border: 2,
+  fontFamily: "Noto Naskh Arabic",
+  "&:hover": {
+    boxShadow: "none",
+    border: 2,
+  },
+};
 
 const MovementEl = (props) => {
   const btnSignStyle = {
@@ -21,43 +55,24 @@ const MovementEl = (props) => {
     left: props.checked ? "-110%" : "0%",
   };
 
-  const boxStyle = {
-    textAlighn: "center",
-    background: "rgba(0, 0, 0, 0.81)",
-    margin: "auto",
-    flexDirection: "column",
-    ...flexStyle('space-evenly'),
-    height: { xs: "100%" },
-  };
 
-  const btnStyle = {
-    width : '160px',
-    boxShadow: "none",
-    padding: "12px 0",
-    fontSize: "1.2rem",
-    fontWeight: "800",
-    overflow: "hidden",
-    borderRadius: "30px ",
-    border: 2,
-    fontFamily: "Noto Naskh Arabic",
-    "&:hover": {
-      boxShadow: "none",
-      border: 2,
-    },
-  };
 
   return (
     <Box sx={boxStyle}>
-      <Box sx={{ display :{md: "none"} , mb: 2 }}>
+      <Box sx={{ display: { md: "none" }, mb: 2 }}>
         <HeadLine removeMargin={true} text="يومك سعيد" />
       </Box>
 
-      <Box  sx={{ display :{xs : "none" , md: "flex" ,   
-      flexDirection : "column" , height : "370px" ,textAlign :"center" , justifyContent : "space-around" } }}>
+      <Box sx={{ display: { xs: "none", md: "block" }, textAlign: "center" }}>
         <HeadLine removeMargin={true} text="يومك" />
-        <MainTitle text="سعيد" />
+        <Typography
+          variant={props.main ? "h1" : "h2"}
+          component={props.main ? "h1" : "h2"}
+          sx={textStyle}
+        >
+          سعيد
+        </Typography>
       </Box>
-      
 
       <Button
         sx={btnStyle}
