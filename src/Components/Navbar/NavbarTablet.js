@@ -9,6 +9,7 @@ import { v4 as uuid } from "uuid";
 import Logo from "../Text/Logo";
 import ContainerBox from "../HOC/ContainerBox";
 import SearchInputTablet from "../Comman/searchInputTablet/SearchInputTablet";
+import Link from 'next/link'
 
 const buttonStyle = {
   fontSize: { sm: ".9rem", md: "1rem" },
@@ -55,22 +56,31 @@ export default function NavbarTablet(props) {
             <SearchInputTablet />
           </Box>
           <Box>
-            {props.routeData.map((el) => {
-              return (
-                <Button
-                  onClick={() => {
-                    props.routeChange(el.text);
-                  }}
-                  sx={buttonStyle}
-                  key={uuid()}
-                  color="inherit"
-                >
-                  {el}
-                </Button>
-              );
-            })}
+          {props.routeData.map((el) => {
+              return (<>
+          <Button> <Link href={el.url} >  jjj  </Link>  </Button>
+       
+          </>    )})}
 
-            <UserMenu />
+          {  //  {props.routeData.map((el) => {
+              // return (
+                
+                //  <Button
+                  // onClick={() => {
+                  //   props.routeChange(el.text);
+                  // }}
+                  // sx={buttonStyle}
+                  // key={uuid()}
+                  // color="inherit"
+                // >
+                //  <Link href={el.url}>  {el.text}    </Link>  
+                // </Button>
+              
+              // );
+            // })} 
+            }
+
+          
           </Box>
         </Toolbar>
       </ContainerBox>
