@@ -2,19 +2,12 @@ import { useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
 import { flexStyle } from "../../General/genralStyle.js";
-import UserMenu from "./UserMenu";
-import { v4 as uuid } from "uuid";
 import Logo from "../Text/Logo";
 import ContainerBox from "../HOC/ContainerBox";
 import SearchInputTablet from "../Comman/searchInputTablet/SearchInputTablet";
-import Link from 'next/link'
+import RoutsLink from "./RoutesLinks.js";
 
-const buttonStyle = {
-  fontSize: { sm: ".9rem", md: "1rem" },
-  textTransform: "capitalize",
-};
 
 export default function NavbarTablet(props) {
   const [colorChange, setColorchange] = useState("var(--lightBlack)");
@@ -55,33 +48,7 @@ export default function NavbarTablet(props) {
           <Box sx={{ width: "40%" }}>
             <SearchInputTablet />
           </Box>
-          <Box>
-          {props.routeData.map((el) => {
-              return (<>
-          <Button> <Link href={el.url} >  jjj  </Link>  </Button>
-       
-          </>    )})}
-
-          {  //  {props.routeData.map((el) => {
-              // return (
-                
-                //  <Button
-                  // onClick={() => {
-                  //   props.routeChange(el.text);
-                  // }}
-                  // sx={buttonStyle}
-                  // key={uuid()}
-                  // color="inherit"
-                // >
-                //  <Link href={el.url}>  {el.text}    </Link>  
-                // </Button>
-              
-              // );
-            // })} 
-            }
-
-          
-          </Box>
+          <RoutsLink />
         </Toolbar>
       </ContainerBox>
     </AppBar>

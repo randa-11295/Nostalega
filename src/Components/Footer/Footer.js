@@ -32,7 +32,7 @@ const Footer = () => {
         </Typography>
 
         <Typography variant="h5" component="h5">
-          فريق العمل
+          {/* فريق العمل */}
         </Typography>
 
         <Typography variant="p" component="p" sx={textStyle}>
