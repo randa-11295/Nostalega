@@ -33,7 +33,7 @@ useEffect(() => {
     <CacheProvider value={cacheRtl}>
       <ThemeProvider theme={theme}>
       {loading ? 
-      <AppBar sx={{zIndex : "20000" }}>
+      <AppBar sx={{zIndex : "2000" }}>
       <LinearProgress sx={{height: "6px"}}  /> 
       </AppBar>:
        null}

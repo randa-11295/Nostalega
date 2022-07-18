@@ -6,6 +6,7 @@ import IconCustomButton from "../Comman/IconCustomButton";
 import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import PlayIcon from "../Comman/PlayIcon";
 import Photo from "../Comman/Photo";
+import { flexStyle } from "../../General/genralStyle";
 
 const MovieCard = () => {
   const BoxStyle = {
@@ -16,6 +17,7 @@ const MovieCard = () => {
     padding: "20px",
     margin: "auto",
     textAlign : "left" , 
+
   };
 
   const containImage = {
@@ -43,9 +45,9 @@ const MovieCard = () => {
   return (
     <Box component="aside" sx={BoxStyle}>
       <Box sx={containImage}>
-        <Photo title="cart cover" path={pathImg} />
+        <Photo title="cart cover" path={"https://i.ibb.co/7K7k7Tq/colourful-dynamic-flow-wallpaper-52683-42965.jpg"} />
       </Box>
-
+     <Box>
       <Typography variant="h3" component="h3" sx={TextStyle}>
         أميرة حبي انا
       </Typography>
@@ -60,10 +62,11 @@ const MovieCard = () => {
           <PlayIcon />
         </ButtonCustom>
 
-        <IconCustomButton title="إضافة لقائمتي" small={true} >
+        <IconCustomButton title="إضافة لقائمتي" small={true} red={true} >
           <PlaylistAddIcon />
         </IconCustomButton>
       </Box>
+    </Box>
     </Box>
   );
 };

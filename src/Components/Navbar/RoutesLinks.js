@@ -8,9 +8,9 @@ import { v4 as uuid } from "uuid";
 
 const routeData = [
   { text: "دخول", url: "/form" },
-  { text: "نوادر", url: "/" },
-  { text: "اغاني", url: "/media" },
-  { text: "افلام", url: "/category" },
+  { text: "معرض", url: "/category" },
+  { text: "فيلم", url: "/media" },
+  { text: "مستخدم", url: "/user" },
 ];
 
 const boxStyle= {
@@ -36,7 +36,7 @@ const RoutsLink = (props) => {
               handleClick(el.url);
             }}
           >
-            <ListItemText primary={el.text} sx={{ textAlign: "center" }} />
+            <ListItemText primary={<h4>{el.text}</h4>} sx={{ textAlign: "center" , }} />
           </ListItemButton>
         </ListItem>
       ))}

@@ -48,21 +48,21 @@ const Rejesteration = (props) => {
   return (
     <Box sx={{ height: "100%", ...flexStyle() }}>
       <Box sx={BoxStyle} component="form" onSubmit={formik.handleSubmit}>
-        <HeadLine red
-          removeMargin={true}
+     
+        <HeadLine red removeMargin
           text={props.log ? "تسجيل دخول" : "أنشاء حساب"}
         />
 
-        <Box sx={{ mt: 4, mb: 2 }}>
+        {/* <Box sx={{ mt: 4, mb: 2 }}>
           <BtnIconNoDesc social={true}>
             <i className="ri-facebook-fill" />
           </BtnIconNoDesc>
           <BtnIconNoDesc social={true}>
             <i className="ri-google-fill" />
           </BtnIconNoDesc>
-        </Box>
+        </Box> */}
 
-        <Box sx={{ width: "100%", textAlign: "center", mb: 2 }}>
+        <Box sx={{ width: "100%", textAlign: "center", mt: 2, }}>
           {!props.log ? (
             <InputTextCustom formik={formik} name="name" label="الاسم" />
           ) : null}

@@ -21,8 +21,9 @@ export default function BtnIconNoDesc(props) {
   return (
     <IconButton
       size={props.small ? "small" : ""}
-      sx={props.small ? staticBtn : hoverBtn}
+      sx={props.red ? staticBtn : hoverBtn}
     >
+      
       {props.children}
     </IconButton>
   );
