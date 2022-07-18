@@ -70,6 +70,6 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--creemy);
   -webkit-box-shadow: 0 0 0 30px var(--lightBlack) inset !important;
   transition: background-color 5000s ease-in-out 0s !important; 
-  
+ 
 }
 

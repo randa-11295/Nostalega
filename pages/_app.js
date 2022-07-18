@@ -1,12 +1,16 @@
 import "../styles/globals.css";
 import { ThemeProvider } from "@mui/material/styles";
-import rtlPlugin from "stylis-plugin-rtl";
 import { CacheProvider } from "@emotion/react";
-import createCache from "@emotion/cache";
+import { useEffect , useState } from 'react'
+import { useRouter } from 'next/router'
 import { prefixer } from "stylis";
 import theme from "../src/General/theme";
 import Navbar from "../src/Components/Navbar/Navbar";
 import Footer from "../src/Components/Footer/Footer";
+import rtlPlugin from "stylis-plugin-rtl";
+import createCache from "@emotion/cache";
+import LinearProgress from '@mui/material/LinearProgress';
+import AppBar from '@mui/material/AppBar';
 
 // Create rtl cache
 const cacheRtl = createCache({
@@ -15,9 +19,24 @@ const cacheRtl = createCache({
 });
 
 function MyApp({ Component, pageProps }) {
+const router = useRouter()
+const [loading  , setLoading] = useState(false)
+
+// route loader
+useEffect(() => {
+  router.events.on('routeChangeStart', ()=>{ setLoading(true) } )
+  router.events.on('routeChangeComplete', ()=>{ setLoading(false)} )
+  router.events.on('routeChangeError', ()=>{ setLoading(false) } )
+}, [router])
+
   return (
     <CacheProvider value={cacheRtl}>
       <ThemeProvider theme={theme}>
+      {loading ? 
+      <AppBar sx={{zIndex : "20000" }}>
+      <LinearProgress sx={{height: "6px"}}  /> 
+      </AppBar>:
+       null}
         <Navbar />
         <Component {...pageProps} />
         <Footer />

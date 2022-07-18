@@ -30,7 +30,7 @@ const RoutsLink = (props) => {
       sx={boxStyle}
     >
       {routeData.map((el) => (
-        <ListItem key={el.url} sx={{ borderTop: "1px solid var(--creemy)" }}>
+        <ListItem key={el.url} sx={{ borderTop: {xs :"1px solid var(--creemy)" , md : "none"} }}>
           <ListItemButton
             onClick={() => {
               handleClick(el.url);

@@ -7,7 +7,7 @@ import Logo from "../Text/Logo";
 import ContainerBox from "../HOC/ContainerBox";
 import SearchInputTablet from "../Comman/searchInputTablet/SearchInputTablet";
 import RoutsLink from "./RoutesLinks.js";
-
+import LinearProgress from '@mui/material/LinearProgress';
 
 export default function NavbarTablet(props) {
   const [colorChange, setColorchange] = useState("var(--lightBlack)");
@@ -40,13 +40,15 @@ export default function NavbarTablet(props) {
         display: { xs: "none", md: "block" },
       }}
     >
+
+      {/* <LinearProgress  /> */}
       <ContainerBox>
         <Toolbar
           sx={{ ...flexStyle("space-between"), padding: "0px !important" }}
         >
           <Logo />
           <Box sx={{ width: "40%" }}>
-            <SearchInputTablet />
+            {/* <SearchInputTablet /> */}
           </Box>
           <RoutsLink />
         </Toolbar>
