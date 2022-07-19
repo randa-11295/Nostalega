@@ -74,7 +74,7 @@ export default function BasicTabs() {
     <Box sx={{ width: "100%", }}>
       <Box>
         <Tabs
-           orientation="vertical"
+          //  orientation="vertical"
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
