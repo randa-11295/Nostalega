@@ -35,7 +35,7 @@ export default function UserMenu() {
   }
 
   return (
-    <Box sx={{ position: "relative" ,}}>
+    <Box sx={{ position: "relative" ,display : {xs : "none" , md: "block"}}}>
       <ListItem>
         <ListItemButton onClick={openToggelHandel}>
           <ListItemText primary={<h4>حسابي</h4>} sx={{ textAlign: "center" }} />
@@ -58,7 +58,7 @@ export default function UserMenu() {
             <SettingsIcon fontSize="small" />
           </ListItemIcon>
           <Typography variant="inherit " noWrap>
-            تعديل حسابي
+            تعديل بياناتي
           </Typography>
         </MenuItem>
         <Divider sx={{ background: "#fff" }} />

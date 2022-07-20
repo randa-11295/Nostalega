@@ -1,16 +1,18 @@
 import HeadLine from "../Text/HeadLine";
-import ButtonCustom from "../Comman/ButtonCustom";
 import InputTextCustom from "../Comman/InputTextCustom";
-import BtnIconNoDesc from "../Comman/BtnIconNoDesc";
 import Typography from "@mui/material/Typography";
 import CheckArea from "../Comman/CheckArea";
 import LoadBtn from "../Comman/LoadBtn";
 import { Box } from "@mui/material";
 import { useFormik } from "formik";
 import { flexStyle } from "../../General/genralStyle";
+import { useDispatch } from "react-redux";
+import { loginHandel } from "../../Redux/sliceReducers/rejesterSlice";
 import { useMutation } from "@apollo/client";
 import { logInSchema, signUpSchema } from "../../General/vaildationShema";
-import { addRejstrationQuiery , addLoginQuiery } from "../../ApolloClint/quieries"
+import { addRejstrationQuiery, addLoginQuiery} from "../../ApolloClint/quieries";
+
+
 const BoxStyle = {
   height: { xs: "95%", md: "80%", xl: "75%" },
   width: { xs: "100%", sm: "90%", md: "80%", lg: "55%" },
@@ -43,59 +45,61 @@ const sign = {
 };
 
 const Rejesteration = (props) => {
+  const dispatch = useDispatch();
+
+  //   login login
+  // *************************** //
 
   const formikLog = useFormik({
     initialValues: login,
     validationSchema: logInSchema,
     onSubmit: (values) => {
       console.log("log ", values);
-      LogingReq()
+      LogingReq();
     },
   });
 
-const [LogingReq  , {loading: logingLoading }] = useMutation(
-  addLoginQuiery , 
-    { variables:  formikLog.values ,
-      onCompleted: (res) => {
-        console.log(res)
-      },
-      onError : (err)=>{
-        console.log(err)
-      }   
-    }
-  );
+  const [LogingReq, { loading: logingLoading }] = useMutation(addLoginQuiery, {
+    variables: formikLog.values,
+    onCompleted: (res) => {
+      dispatch(loginHandel({ payload: res.login.token }));
+      console.log(res.login.token);
+    },
+    onError: (err) => {
+      console.log(err);
+    },
+  });
 
+  //  logic sign
+  // *************************** //
 
   const formikSign = useFormik({
     initialValues: sign,
     validationSchema: signUpSchema,
     onSubmit: (values) => {
       console.log("rej ", values);
-      rejesteratioReq()
+      rejesteratioReq();
     },
   });
 
-  const [rejesteratioReq , {loading: rejLoading  }] = useMutation(
-    addRejstrationQuiery , 
+  const [rejesteratioReq, { loading: rejLoading }] = useMutation(
+    addRejstrationQuiery,
     {
       variables: {
-        registerInput: formikSign.values
+        registerInput: formikSign.values,
       },
       onCompleted: (res) => {
-        console.log(res)
-        formik.resetForm()
+        console.log(res);
+        formik.resetForm();
+        dispatch(loginHandel({ payload: res.login.token }));
       },
-      onError : (err)=>{
-        console.log(err)
-      }   
+      onError: (err) => {
+        console.log(err);
+      },
     }
   );
 
-
-
-  
- 
-
+  // *************************** //
   let formik = props.log ? formikLog : formikSign;
 
   return (
@@ -106,15 +110,6 @@ const [LogingReq  , {loading: logingLoading }] = useMutation(
           removeMargin
           text={props.log ? "تسجيل دخول" : "أنشاء حساب"}
         />
-
-        {/* <Box sx={{ mt: 4, mb: 2 }}>
-          <BtnIconNoDesc social={true}>
-            <i className="ri-facebook-fill" />
-          </BtnIconNoDesc>
-          <BtnIconNoDesc social={true}>
-            <i className="ri-google-fill" />
-          </BtnIconNoDesc>
-        </Box> */}
 
         <Box sx={{ width: "100%", textAlign: "center", mt: 2 }}>
           {!props.log ? (
@@ -159,8 +154,7 @@ const [LogingReq  , {loading: logingLoading }] = useMutation(
             </Box>
           ) : null}
         </Box>
-    <LoadBtn loading={logingLoading || rejLoading} />
-    
+        <LoadBtn loading={logingLoading || rejLoading} />
       </Box>
     </Box>
   );

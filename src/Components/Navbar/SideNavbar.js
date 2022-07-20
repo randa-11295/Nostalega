@@ -9,19 +9,13 @@ const listStyle = {
   background: "var(--lightBlack)",
   color: "var(--creemy)",
   padding: "30px 5px",
-  minHeight: "100%",
+  height: "100%",
+  overflow: "auto"
 };
-
-
-const routeData = [ {text : "دخول" , url:"/form"} ,
-   {text :"نوادر" , url:"/"},  
-   {text :"اغاني" , url: "/media"}, 
-   {text : "افلام" , url:"/category"}
-   ];
 
 export default function SideNavbar(props) {
   return (
-    <SwipeableDrawer
+    <SwipeableDrawer sx={{display : {md : "none"}}}
       anchor={"left"}
       open={props.right}
       onClose={() => {
@@ -38,11 +32,9 @@ export default function SideNavbar(props) {
         }}
       >
         <Logo />
-      
-          
-          <RoutsLink />
+
+        <RoutsLink />
       </Box>
     </SwipeableDrawer>
-       
   );
 }

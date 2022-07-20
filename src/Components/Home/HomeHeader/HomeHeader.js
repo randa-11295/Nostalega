@@ -19,7 +19,7 @@ const textStyle = {
   margin: { xs: "auto", md: "60px 0 0", lg: "80px 0 0" },
   lineHeight: "2rem",
   wordSpacing: "2px",
-  width: { xs: "90%", sm: "100%", md: "55%", lg: "48%" },
+  width: { xs: "90%", sm: "100%", md: "55%",  },
   fontSize: { xs: ".9rem", sm: "1rem", xl: "1.1rem" },
 };
 const HomeHeader = () => {
