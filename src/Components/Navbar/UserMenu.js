@@ -1,82 +1,53 @@
 import * as React from "react";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
+import MenuList from "@mui/material/MenuList";
 import MenuItem from "@mui/material/MenuItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import Divider from "@mui/material/Divider";
-import PersonAdd from "@mui/icons-material/PersonAdd";
-import Settings from "@mui/icons-material/Settings";
-import Logout from "@mui/icons-material/Logout";
+import Paper from "@mui/material/Paper";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import Typography from "@mui/material/Typography";
+import ClearAllIcon from '@mui/icons-material/ClearAll';
+import SettingsIcon from '@mui/icons-material/Settings';
+import LogoutIcon from '@mui/icons-material/Logout';
 
-export default function UserMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
+const boxStyle = {
+  width: 180,
+  color: "black",
+  position: "absolute",
+  top: "100%",
+  right: "0",
+};
 
-  const handleClick = (event) => {
-    // setAnchorEl(event.currentTarget);
-    console.log("not support yet");
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+export default function TypographyMenu() {
   return (
-    <>
-      <Button onClick={handleClick} color="inherit">
-        دخول
-      </Button>
-
-      <Menu
-        anchorEl={anchorEl}
-        id="account-menu"
-        open={open}
-        onClose={handleClose}
-        onClick={handleClose}
-        PaperProps={{
-          elevation: 0,
-          sx: {
-            background: "red",
-            overflow: "visible",
-            filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-            mt: 1.5,
-            "& .MuiAvatar-root": {
-              width: 32,
-              height: 32,
-              ml: -0.5,
-              mr: 1,
-              background: "yellow",
-            },
-          },
-        }}
-        transformOrigin={{ horizontal: "right", vertical: "top" }}
-        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-      >
+    <Paper sx={boxStyle}>
+      <MenuList>
         <MenuItem>
-          <Avatar /> Profile
+          <ListItemIcon>
+            <ClearAllIcon fontSize="small" />
+          </ListItemIcon>
+          <Typography variant="inherit" noWrap>
+            قائمتي
+          </Typography>
         </MenuItem>
+      
         <MenuItem>
-          <Avatar /> My account
+          <ListItemIcon>
+            <SettingsIcon fontSize="small" />
+          </ListItemIcon>
+          <Typography variant="inherit " noWrap>
+            تعديل حسابي
+          </Typography>
         </MenuItem>
         <Divider />
         <MenuItem>
           <ListItemIcon>
-            <PersonAdd fontSize="small" />
+            <LogoutIcon fontSize="small" />
           </ListItemIcon>
-          Add another account
+          <Typography variant="inherit" noWrap>
+            تسجل خروج
+          </Typography>
         </MenuItem>
-        <MenuItem>
-          <ListItemIcon>
-            <Settings fontSize="small" />
-          </ListItemIcon>
-          Settings
-        </MenuItem>
-        <MenuItem>
-          <ListItemIcon>
-            <Logout fontSize="small" />
-          </ListItemIcon>
-          Logout
-        </MenuItem>
-      </Menu>
-    </>
+      </MenuList>
+    </Paper>
   );
 }

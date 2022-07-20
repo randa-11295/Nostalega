@@ -25,15 +25,13 @@ const category = () => {
         <SlideShow>
           {arr.map((el) => (
             <SwiperSlide key={uuidv4()}>
-              {" "}
-              <MovieAds />{" "}
+              <MovieAds />
             </SwiperSlide>
           ))}
         </SlideShow>
       </Box>
 
       <CategoryCardContiner />
-
       <Box sx={flexStyle()}>
         <Pagination count={10} color="primary" sx={pageinstStyle} />
       </Box>

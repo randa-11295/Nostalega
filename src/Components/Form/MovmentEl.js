@@ -25,8 +25,8 @@ const boxStyle = {
 const btnStyle = {
   width: "160px",
   boxShadow: "none",
-  padding: "12px 0",
-  fontSize: "1.2rem",
+  padding:{xs : "5px 0" , md : "12px 0"},
+  fontSize: {xs : ".9rem" , md : "1.2rem"},
   fontWeight: "800",
   overflow: "hidden",
   borderRadius: "30px ",
@@ -60,14 +60,14 @@ const MovementEl = (props) => {
   return (
     <Box sx={boxStyle}>
       <Box sx={{ display: { md: "none" }, mb: 2 }}>
-        <HeadLine removeMargin={true} text="يومك سعيد" />
+        <HeadLine big removeMargin text="يومك سعيد" />
       </Box>
 
       <Box sx={{ display: { xs: "none", md: "block" }, textAlign: "center" }}>
         <HeadLine removeMargin={true} text="يومك" />
         <Typography
-          variant={props.main ? "h1" : "h2"}
-          component={props.main ? "h1" : "h2"}
+          variant= "h2"
+          component="h2"
           sx={textStyle}
         >
           سعيد

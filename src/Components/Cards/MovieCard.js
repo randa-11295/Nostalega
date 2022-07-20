@@ -6,7 +6,6 @@ import IconCustomButton from "../Comman/IconCustomButton";
 import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import PlayIcon from "../Comman/PlayIcon";
 import Photo from "../Comman/Photo";
-import { flexStyle } from "../../General/genralStyle";
 
 const MovieCard = () => {
   const BoxStyle = {

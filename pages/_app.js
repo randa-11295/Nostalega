@@ -47,7 +47,9 @@ function MyApp({ Component, pageProps }) {
           </AppBar>
         ) : null}
         <Navbar />
+
         <Component {...pageProps} />
+
         <Footer />
       </ThemeProvider>
     </CacheProvider>

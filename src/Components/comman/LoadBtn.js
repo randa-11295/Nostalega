@@ -17,6 +17,9 @@ export default function LoadBtn(props) {
     },
     "&:disabled":{
       backgroundColor:"#8b2a2a"
+  } ,
+  "& *" : {
+     color : "#fff"
   }
   };
 

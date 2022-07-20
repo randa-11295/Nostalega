@@ -29,7 +29,7 @@ const MovieAds =()=>{
 return(
 <Box sx={boxStyle} >  
     <Box sx={{position : "absolute" , width : "100%" , height : "100%" ,  filter: "brightness(40%)"}}>
-        <Photo title="bannar" path={img} />
+        <Photo title="bannar" path={"https://i.ibb.co/Mf1Sw1P/0089c1ff-0898-40a8-9b74-acc395bcc9f7-16x9-1200x676.jpg"} />
     </Box>
     <Box sx={contentBox}>
 
