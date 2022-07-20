@@ -16,9 +16,13 @@ export const rejesterSlice = createSlice({
       state.isLogin = false;
       localStorage.removeItem("Token")
     },
+    checkIsLog : (state , action)=>{
+      console.log(action)
+      state.isLogin = action.payload;
+    }
   },
 });
 
-export const { loginHandel, logOutHandel } = rejesterSlice.actions;
+export const { loginHandel, logOutHandel ,checkIsLog} = rejesterSlice.actions;
 
 export default rejesterSlice.reducer;

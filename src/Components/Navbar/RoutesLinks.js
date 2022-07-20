@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { flexStyle } from "../../General/genralStyle";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { logOutHandel } from "../../Redux/sliceReducers/rejesterSlice";
+import { logOutHandel , checkIsLog } from "../../Redux/sliceReducers/rejesterSlice";
 import { useEffect } from "react";
 
 const routeData = [
@@ -37,7 +37,7 @@ const RoutsLink = (props) => {
 
   useEffect(()=>{
     const isLoged= Boolean(window.localStorage.getItem("Token"))
-    dispatch(logOutHandel(isLoged))
+    dispatch(checkIsLog(isLoged))
    } ,[])
 
    const logOutFun =()=>{
