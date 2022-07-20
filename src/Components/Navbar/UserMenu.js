@@ -25,7 +25,7 @@ const boxStyle = {
   borderRadius: "10px",
 };
 
-export default function UserMenu() {
+export default function UserMenu(props) {
 
   const [ open , setOpen]= useState(false) 
 
@@ -41,7 +41,7 @@ export default function UserMenu() {
           <ListItemText primary={<h4>حسابي</h4>} sx={{ textAlign: "center" }} />
         </ListItemButton>
       </ListItem>
-        <Box sx={{background : "green" , width : "100%" , position: "absolute", }}>
+        
       <Fade in={open}>
       <MenuList sx={boxStyle}>
         <MenuItem>
@@ -62,7 +62,7 @@ export default function UserMenu() {
           </Typography>
         </MenuItem>
         <Divider sx={{ background: "#fff" }} />
-        <MenuItem>
+        <MenuItem onClick={props.logOutFun}>
           <ListItemIcon sx={{ color: "text.primary" }}>
             <LogoutIcon fontSize="small" />
           </ListItemIcon>
@@ -72,7 +72,6 @@ export default function UserMenu() {
         </MenuItem>
       </MenuList>
       </Fade>
-    </Box>
     </Box>
   );
 }

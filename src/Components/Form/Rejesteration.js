@@ -62,7 +62,7 @@ const Rejesteration = (props) => {
   const [LogingReq, { loading: logingLoading }] = useMutation(addLoginQuiery, {
     variables: formikLog.values,
     onCompleted: (res) => {
-      dispatch(loginHandel({ payload: res.login.token }));
+      dispatch(loginHandel( res.login.token ));
       console.log(res.login.token);
     },
     onError: (err) => {

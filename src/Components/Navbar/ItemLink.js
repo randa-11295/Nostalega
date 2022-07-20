@@ -12,7 +12,7 @@ const ItemLink = (props) => {
     <ListItem sx={itemStyle}>
       <ListItemButton
         onClick={() => {
-          fun(props.url);
+          props.fun(props.url);
         }}
       >
         <ListItemText
