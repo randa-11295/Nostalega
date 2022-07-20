@@ -5,6 +5,7 @@ import Stack from "@mui/material/Stack";
 const BoxStyle = {
   width: "260px",
   margin: "auto",
+  
 };
 
 const containImage = {

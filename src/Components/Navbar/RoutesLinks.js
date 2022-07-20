@@ -5,12 +5,14 @@ import List from "@mui/material/List";
 import { useRouter } from "next/router";
 import { flexStyle } from "../../General/genralStyle";
 import UserMenue from "./UserMenu"
+import { useSelector } from "react-redux"
+import { useEffect } from "react";
 
 const routeData = [
   { text: "دخول", url: "/form" },
   { text: "معرض", url: "/category" },
   { text: "فيلم", url: "/media" },
-  { text: "مستخدم", url: "/user" },
+  // { text: "مستخدم", url: "/user" },
 ];
 
 const boxStyle= {
@@ -22,6 +24,12 @@ const boxStyle= {
 
 const RoutsLink = (props) => {
   const router = useRouter();
+
+  const islogin = useSelector((state) => state.isLogin)
+   
+  useEffect(()=>{
+    console.log(islogin)
+  } , [islogin])
 
   const handleClick = (url) => {
     router.push(url);
@@ -41,8 +49,7 @@ const RoutsLink = (props) => {
           </ListItemButton>
         </ListItem>
       ))}
-
-      {/* <UserMenue /> */}
+      <UserMenue />
     </List>
   );
 };

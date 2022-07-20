@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
-import ImageCover from "./ImageCover/ImageCover"
 import { useState  } from "react"
+import ImageCover from "./ImageCover/ImageCover"
 
 const vedioStyle ={  height :{ xs : '350px' , sm : "400px", md : "500px"  , lg : "600px" },
                      margin : " 0 auto 60px" ,
@@ -27,6 +27,7 @@ setRunVideo(isVideo)
 
 return(
 <Box sx={vedioStyle} >
+   
 { runVideo ?  <ImageCover changeVideo={changeVideo} />  : 
               <iframe width="100%"  height="100%" 
                      src="https://www.youtube.com/embed/DX3GVPCaAOw?autoplay=1" 

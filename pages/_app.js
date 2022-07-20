@@ -11,8 +11,10 @@ import rtlPlugin from "stylis-plugin-rtl";
 import createCache from "@emotion/cache";
 import LinearProgress from "@mui/material/LinearProgress";
 import AppBar from "@mui/material/AppBar";
-import client from "../src/ApolloClint/client"
+import client from "../src/ApolloClint/client";
 import { ApolloProvider } from "@apollo/client";
+import { store } from "../src/Redux/store";
+import { Provider } from "react-redux";
 
 // Create rtl cache
 const cacheRtl = createCache({
@@ -38,22 +40,24 @@ function MyApp({ Component, pageProps }) {
   }, [router]);
 
   return (
-    <ApolloProvider client={client}>
-    <CacheProvider value={cacheRtl}>
-      <ThemeProvider theme={theme}>
-        {loading ? (
-          <AppBar sx={{ zIndex: "2000" }}>
-            <LinearProgress sx={{ height: "5px" }} />
-          </AppBar>
-        ) : null}
-        <Navbar />
+    <ApolloProvider client={client}> 
+      <Provider store={store}>
+        <CacheProvider value={cacheRtl}>
+          <ThemeProvider theme={theme}>
+            {loading ? (
+              <AppBar sx={{ zIndex: "2000" }}>
+                <LinearProgress sx={{ height: "5px" }} />
+              </AppBar>
+            ) : null}
+            <Navbar />
 
-        <Component {...pageProps} />
+            <Component {...pageProps} />
 
-        <Footer />
-      </ThemeProvider>
-    </CacheProvider>
-     </ApolloProvider>
+            <Footer />
+          </ThemeProvider>
+        </CacheProvider>
+      </Provider>
+    </ApolloProvider>
   );
 }
 
