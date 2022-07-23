@@ -30,7 +30,7 @@ const category = () => {
           ))}
         </SlideShow>
       </Box>
-
+     
       <CategoryCardContiner />
       <Box sx={flexStyle()}>
         <Pagination count={10} color="primary" sx={pageinstStyle} />

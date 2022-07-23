@@ -3,8 +3,7 @@ import UserMenue from "./UserMenu";
 import ItemLink from "./ItemLink";
 import { useRouter } from "next/router";
 import { flexStyle } from "../../General/genralStyle";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useDispatch , useSelector} from "react-redux";
 import { logOutHandel , checkIsLog } from "../../Redux/sliceReducers/rejesterSlice";
 import { useEffect } from "react";
 

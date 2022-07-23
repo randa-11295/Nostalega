@@ -15,6 +15,8 @@ import client from "../src/ApolloClint/client";
 import { ApolloProvider } from "@apollo/client";
 import { store } from "../src/Redux/store";
 import { Provider } from "react-redux";
+import { SnackbarProvider, } from 'notistack';
+import { green } from "@mui/material/colors";
 
 // Create rtl cache
 const cacheRtl = createCache({
@@ -44,16 +46,23 @@ function MyApp({ Component, pageProps }) {
       <Provider store={store}>
         <CacheProvider value={cacheRtl}>
           <ThemeProvider theme={theme}>
+          
             {loading ? (
               <AppBar sx={{ zIndex: "2000" }}>
-                <LinearProgress sx={{ height: "5px" }} />
+                <LinearProgress  sx={{ height: "6px" ,
+              
+                background : 'var(--lightBlack)'
+              
+              }} />
               </AppBar>
             ) : null}
+
             <Navbar />
 
             <Component {...pageProps} />
 
             <Footer />
+         
           </ThemeProvider>
         </CacheProvider>
       </Provider>

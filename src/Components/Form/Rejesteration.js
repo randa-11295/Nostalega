@@ -8,10 +8,11 @@ import { useFormik } from "formik";
 import { flexStyle } from "../../General/genralStyle";
 import { useDispatch } from "react-redux";
 import { loginHandel } from "../../Redux/sliceReducers/rejesterSlice";
+import { openHandel , closeHandel} from "../../Redux/sliceReducers/notificationsSlice";
 import { useMutation } from "@apollo/client";
 import { logInSchema, signUpSchema } from "../../General/vaildationShema";
 import { addRejstrationQuiery, addLoginQuiery} from "../../ApolloClint/quieries";
-
+import SnackAlart from "../Comman/SnackAlart";
 
 const BoxStyle = {
   height: { xs: "95%", md: "80%", xl: "75%" },
@@ -63,12 +64,13 @@ const Rejesteration = (props) => {
     variables: formikLog.values,
     onCompleted: (res) => {
       dispatch(loginHandel( res.login.token ));
-      console.log(res.login.token);
     },
     onError: (err) => {
-      console.log(err);
-    },
-  });
+      errorHandel(err.message)
+}
+});
+
+  
 
   //  logic sign
   // *************************** //
@@ -94,13 +96,30 @@ const Rejesteration = (props) => {
         dispatch(loginHandel({ payload: res.login.token }));
       },
       onError: (err) => {
-        console.log(err);
+        errorHandel(err.message)
       },
     }
   );
 
+   // logic
   // *************************** //
   let formik = props.log ? formikLog : formikSign;
+
+  const errorHandel=(msg)=>{
+    let text = ""
+    if (msg === "user not Found"){
+      text = "حساب غير موجود" 
+    }
+   else if (msg === "email Aleady taken"){
+      text = "حساب مسجل من قبل" 
+    }
+    else {  text = "يوجد مشكلة ما "  }
+
+    console.log(msg)
+    dispatch(openHandel( { msg :text, variant  :"error"}))
+    setTimeout(()=>{  dispatch(closeHandel( ))} , 5000)
+  }
+   
 
   return (
     <Box sx={{ height: "100%", ...flexStyle() }}>
@@ -156,6 +175,7 @@ const Rejesteration = (props) => {
         </Box>
         <LoadBtn loading={logingLoading || rejLoading} />
       </Box>
+      <SnackAlart  />
     </Box>
   );
 };
