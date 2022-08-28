@@ -20,6 +20,7 @@ const BoxStyle = {
   padding: { xs: "30px 10% ", md: "15px " },
   ...flexStyle("space-evenly"),
   flexDirection: "column",
+
 };
 
 const textStyle = {
@@ -122,7 +123,7 @@ const Rejesteration = (props) => {
    
 
   return (
-    <Box sx={{ height: "100%", ...flexStyle() }}>
+    <Box sx={{ height: "100%", ...flexStyle("center") ,}}>
       <Box sx={BoxStyle} component="form" onSubmit={formik.handleSubmit}>
         <HeadLine
           red

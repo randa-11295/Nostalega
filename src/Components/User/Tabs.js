@@ -5,7 +5,8 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import PhoneIcon from "@mui/icons-material/Phone";
-import LikesCard from "../Cards/LikesCard"
+// import LikesCard from "../Cards/LikesCard"
+import MenuCard from "../Cards/NumCard";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -58,7 +59,7 @@ export default function BasicTabs() {
       <Tab
         label={<p style={{ margin: "10px 0" }}>{el.text}</p>}
         icon={el.icon}
-        
+        key={indx + el.text}
         iconPosition="start"
         sx={{
           color: "var(--creemy)",
@@ -83,8 +84,9 @@ export default function BasicTabs() {
           {reapetTaps()}
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0} >
-        <LikesCard />
+      <TabPanel  value={value} index={0} >
+        {/* <LikesCard /> */}
+        <MenuCard />
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two

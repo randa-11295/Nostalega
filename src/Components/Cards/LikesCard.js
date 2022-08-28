@@ -2,39 +2,40 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ButtonCustom from "../Comman/ButtonCustom";
 import IconCustomButton from "../Comman/IconCustomButton";
-import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import PlayIcon from "../Comman/PlayIcon";
 import Photo from "../Comman/Photo";
+import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import ClearIcon from "@mui/icons-material/Clear";
 
 const MovieCard = () => {
   const BoxStyle = {
     borderRadius: "12px",
     color: "black",
-    padding: "20px",
+    padding: "15px ",
     textAlign: "left",
     border: "1px solid var(--creemy)",
-    display: { sm: "flex" },
+    display: "flex" ,
+    mb: 4
   };
 
   const containImage = {
     outline: "1px solid var(--Grey)",
-    height: "130px",
-    width: { xs: "100%", sm: "130px" },
+    height: "100px",
+    width:  "100px" ,
     overflow: "hidden",
     borderRadius: "12px",
-    marginRight: "25px",
+    marginRight: "15px",
   };
 
   const TextStyle = {
-    marginTop: "15px",
     fontSize: "1.4rem",
     fontWeight: "800",
     color: "white",
+    marginTop:"5px" , 
   };
 
   const pragStyle = {
-    margin: "13px 0",
+    margin: "7px 0",
     fontFamily: "Noto Naskh Arabic",
     fontSize: ".7rem",
     fontWeight: "600",
@@ -67,8 +68,8 @@ const MovieCard = () => {
             <PlayIcon />
           </ButtonCustom>
 
-          <IconCustomButton title="إضافة لقائمتي" small={true}>
-            <ClearIcon />
+          <IconCustomButton title="إزاله من قائمتي" small={true}>
+            <ClearIcon sx={{fontSize : "1.1rem"}} />
           </IconCustomButton>
         </Box>
       </Box>

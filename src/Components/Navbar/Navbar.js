@@ -8,8 +8,7 @@ const Navbar = () => {
   return (
     <Box>
       <NavbarTablet  />
-      <NavbarMobile />
-      
+      <NavbarMobile />  
     </Box>
   );
 };

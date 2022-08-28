@@ -17,7 +17,6 @@ export const rejesterSlice = createSlice({
       localStorage.removeItem("Token")
     },
     checkIsLog : (state , action)=>{
-      console.log(action)
       state.isLogin = action.payload;
     }
   },

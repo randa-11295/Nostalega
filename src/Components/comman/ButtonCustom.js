@@ -6,7 +6,7 @@ const ButtonCustom = (props) => {
     boxShadow: "none",
     fontWeight: "700",
     zIndex: 1,
-    mr : 1 , 
+    // mr : 1 , 
     fontSize: "1.1rem",
     fontFamily: "Noto Naskh Arabic",
     "&:hover": {

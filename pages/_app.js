@@ -15,8 +15,6 @@ import client from "../src/ApolloClint/client";
 import { ApolloProvider } from "@apollo/client";
 import { store } from "../src/Redux/store";
 import { Provider } from "react-redux";
-import { SnackbarProvider, } from 'notistack';
-import { green } from "@mui/material/colors";
 
 // Create rtl cache
 const cacheRtl = createCache({

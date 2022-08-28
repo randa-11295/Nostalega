@@ -15,8 +15,9 @@ const Photo = (props) => {
         layout="fill"
         objectFit="cover"
         priority
-        alt={props.title || ""}
+        alt={Math.random().toString()}
         src={props.path}
+        
       />
     </Box>
   );
