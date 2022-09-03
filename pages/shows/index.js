@@ -9,6 +9,7 @@ import { SwiperSlide } from "swiper/react";
 import { v4 as uuidv4 } from "uuid";
 import { gql } from "@apollo/client";
 import client from "../../src/ApolloClint/client";
+import { getAllShows } from "../../src/ApolloClint/quieries";
 import { useEffect } from "react";
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -20,8 +21,6 @@ const category = (props) => {
     "& *": { color: "var(--creemy) !important" },
   };
 
-
-  
   return (
     <ContainerBox>
       <Box
@@ -35,40 +34,24 @@ const category = (props) => {
           ))}
         </SlideShow>
       </Box>
-     
-      <CategoryCardContinuer shows={props.shows }/>
+
+      <CategoryCardContinuer shows={props.shows} />
       <Box sx={flexStyle()}>
         <Pagination count={10} color="primary" sx={paginationStyle} />
       </Box>
     </ContainerBox>
   );
 };
-// export async function getStaticProps (){
-// return {
-//   props : {
-//     data : arr
-//   }
-// }
-// }
+
 export async function getStaticProps() {
   const { data } = await client.query({
-    query: gql`
-    query GetShows {
-      getShows {
-        _id
-        date
-        name
-        poster
-        type
-      }
-    }
-    `,
+    query: getAllShows,
   });
 
   return {
     props: {
-      shows : data.getShows
+      shows: data.getShows,
     },
- };
+  };
 }
 export default category;
