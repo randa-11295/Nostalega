@@ -12,8 +12,7 @@ import { useEffect } from "react";
 
 const routeData = [
   { text: "دخول", url: "/form" },
-  { text: "معرض", url: "/category" },
-  { text: "فيلم", url: "/media" },
+  { text: "معرض", url: "/shows" },
 ];
 
 const accountData = [

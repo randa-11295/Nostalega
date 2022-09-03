@@ -12,10 +12,8 @@ const Home = () => {
       <HomeHeader />
 
       <ContainerBox>
-        <CardSlideShow />
-        <CardSlideShow />
-        <CardSlideShow />
-        <CardSlideShow />
+        {/* <CardSlideShow /> */}
+    
       </ContainerBox>
     </>
   );
